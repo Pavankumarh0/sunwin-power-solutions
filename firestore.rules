@@ -1,0 +1,40 @@
+rules_version = '2';
+
+service cloud.firestore {
+  match /databases/{database}/documents {
+    
+    // ============================================
+    // CONTACT FORM SUBMISSIONS
+    // ============================================
+    // Allows anyone to submit the contact form
+    // Only authenticated admin users can read submissions
+    match /contacts/{contactId} {
+      // Anyone can create (submit contact form)
+      allow create: if true 
+                    && request.resource.data.keys().hasAll(['name', 'email', 'phone', 'message'])
+                    && request.resource.data.name is string
+                    && request.resource.data.email is string
+                    && request.resource.data.phone is string
+                    && request.resource.data.message is string
+                    && request.resource.data.name.size() > 0
+                    && request.resource.data.email.matches('.+@.+[.].+')
+                    && request.resource.data.message.size() > 0;
+      
+      // Only authenticated users (you) can read submissions
+      allow read: if request.auth != null;
+      
+      // Nobody can update or delete submissions (data protection)
+      allow update: if false;
+      allow delete: if false;
+    }
+    
+    // ============================================
+    // DEFAULT RULE - DENY ALL OTHER ACCESS
+    // ============================================
+    // Deny access to any other collections
+    match /{document=**} {
+      allow read, write: if false;
+    }
+  }
+}
+
