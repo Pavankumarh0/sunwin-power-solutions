@@ -316,8 +316,8 @@ export default function SunvinAdminPage() {
                     : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
                 }`}
               >
-                <span className="hidden sm:inline">{service}</span>
-                <span className="sm:hidden">{service.split(' ')[0]}</span> ({contacts.filter((c) => c.service === service).length})
+                <span className="hidden sm:inline">{service || 'Unknown'}</span>
+                <span className="sm:hidden">{service ? service.split(' ')[0] : 'Unknown'}</span> ({contacts.filter((c) => c.service === service).length})
               </button>
             ))}
           </div>
