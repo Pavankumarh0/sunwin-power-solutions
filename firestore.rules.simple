@@ -1,0 +1,42 @@
+rules_version = '2';
+
+service cloud.firestore {
+  match /databases/{database}/documents {
+    
+    // ============================================
+    // CONTACT FORM SUBMISSIONS (SIMPLE VERSION)
+    // ============================================
+    // This version allows reading without authentication
+    // Suitable for development and simple password-based admin
+    match /contacts/{contactId} {
+      // Anyone can create (submit contact form)
+      allow create: if true 
+                    && request.resource.data.keys().hasAll(['name', 'email', 'phone', 'message'])
+                    && request.resource.data.name is string
+                    && request.resource.data.email is string
+                    && request.resource.data.phone is string
+                    && request.resource.data.message is string
+                    && request.resource.data.name.size() > 0
+                    && request.resource.data.email.matches('.+@.+[.].+')
+                    && request.resource.data.message.size() > 0;
+      
+      // Anyone can read (for simple admin panel without Firebase Auth)
+      // ⚠️ For production, implement Firebase Authentication and use the advanced rules
+      allow read: if true;
+      
+      // Anyone can delete (for admin panel delete functionality)
+      // ⚠️ For production, restrict this to authenticated admins only
+      allow delete: if true;
+      
+      // Nobody can update submissions
+      allow update: if false;
+    }
+    
+    // ============================================
+    // DEFAULT RULE - DENY ALL OTHER ACCESS
+    // ============================================
+    match /{document=**} {
+      allow read, write: if false;
+    }
+  }
+}

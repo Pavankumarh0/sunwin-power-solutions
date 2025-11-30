@@ -1,0 +1,205 @@
+'use client';
+
+import { motion } from 'framer-motion';
+import { useInView } from 'framer-motion';
+import { useRef, useState } from 'react';
+import Image from 'next/image';
+import Link from 'next/link';
+
+const Gallery = () => {
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true, margin: "-100px" });
+  const [selectedCategory, setSelectedCategory] = useState('All');
+
+  const categories = ['All', 'Ground Mount', 'Roof Solar', 'Industrial', 'Street Lights', 'Installations'];
+
+  // Gallery images from /public/images/gallery/
+  const galleryImages = [
+    'IMG-20251126-WA0011.jpg',
+    'IMG-20251126-WA0012.jpg',
+    'IMG-20251126-WA0013.jpg',
+    'IMG-20251126-WA0015.jpg',
+    'IMG-20251126-WA0016.jpg',
+    'IMG-20251126-WA0017.jpg',
+    'IMG-20251126-WA0018.jpg',
+    'IMG-20251126-WA0019.jpg',
+    'IMG-20251126-WA0020.jpg',
+    'IMG-20251126-WA0021.jpg',
+    'IMG-20251126-WA0022.jpg',
+    'IMG-20251126-WA0023.jpg',
+    'IMG-20251126-WA0024.jpg',
+    'IMG-20251126-WA0025.jpg',
+    'IMG-20251126-WA0026.jpg',
+    'IMG-20251126-WA0027.jpg',
+    'IMG-20251126-WA0028.jpg',
+    'IMG-20251126-WA0029.jpg',
+    'IMG-20251126-WA0030.jpg',
+    'IMG-20251126-WA0031.jpg',
+    'IMG-20251126-WA0032.jpg',
+    'IMG-20251126-WA0033.jpg',
+    'IMG-20251126-WA0034.jpg',
+    'IMG-20251126-WA0035.jpg',
+    'IMG-20251126-WA0036.jpg',
+    'IMG-20251126-WA0037.jpg',
+    'IMG-20251126-WA0038.jpg',
+    'IMG-20251126-WA0039.jpg',
+    'IMG-20251126-WA0040.jpg',
+    'IMG-20251126-WA0041.jpg',
+    'IMG-20251126-WA0042.jpg',
+    'IMG-20251126-WA0043.jpg',
+    'IMG-20251126-WA0044.jpg',
+    'IMG-20251126-WA0045.jpg',
+    'IMG-20251126-WA0046.jpg',
+    'IMG-20251126-WA0047.jpg',
+    'IMG-20251126-WA0048.jpg',
+    'IMG-20251126-WA0049.jpg',
+    'IMG-20251126-WA0050.jpg',
+    'IMG-20251126-WA0051.jpg',
+    'IMG-20251126-WA0052.jpg',
+    'IMG-20251126-WA0053.jpg',
+    'IMG-20251126-WA0054.jpg',
+    'IMG-20251126-WA0055.jpg',
+    'IMG-20251126-WA0056.jpg',
+    'IMG-20251126-WA0057.jpg',
+    'IMG-20251126-WA0058.jpg',
+    'IMG-20251126-WA0059.jpg',
+    'IMG-20251126-WA0060.jpg',
+    'IMG-20251126-WA0061.jpg',
+    'IMG-20251126-WA0062.jpg',
+    'IMG-20251126-WA0063.jpg',
+    'IMG-20251126-WA0065.jpg',
+  ];
+
+  // Function to assign category based on image index (you can customize this)
+  const getCategory = (index: number): string => {
+    // Distribute images across categories
+    const categoryIndex = index % (categories.length - 1); // Exclude 'All'
+    return categories[categoryIndex + 1]; // +1 to skip 'All'
+  };
+
+  // Create gallery items from images
+  const galleryItems = galleryImages.map((imageName, index) => {
+    const category = getCategory(index);
+    const imageNumber = imageName.replace('IMG-20251126-WA', '').replace('.jpg', '');
+    return {
+      image: `/images/gallery/${imageName}`,
+      title: `Solar Installation ${imageNumber}`,
+      category: category,
+    };
+  });
+
+  const filteredItems = selectedCategory === 'All'
+    ? galleryItems
+    : galleryItems.filter(item => item.category === selectedCategory);
+
+  return (
+    <section id="gallery" className="py-20 bg-gray-50" ref={ref}>
+      <div className="container mx-auto px-4">
+        <motion.div
+          initial={{ opacity: 0, y: 50 }}
+          animate={isInView ? { opacity: 1, y: 0 } : {}}
+          transition={{ duration: 0.8 }}
+          className="text-center mb-12"
+        >
+          <h2 className="text-4xl md:text-5xl font-bold text-gray-800 mb-4">
+            Our <span className="text-primary">Gallery</span>
+          </h2>
+          <p className="text-gray-600 max-w-2xl mx-auto">
+            Explore our completed solar installations and see the quality of our work
+          </p>
+        </motion.div>
+
+        {/* Category Filter */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          animate={isInView ? { opacity: 1, y: 0 } : {}}
+          transition={{ delay: 0.2, duration: 0.6 }}
+          className="flex flex-wrap justify-center gap-4 mb-12"
+        >
+          {categories.map((category) => (
+            <motion.button
+              key={category}
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              onClick={() => setSelectedCategory(category)}
+              className={`px-6 py-2 rounded-full font-semibold transition-all ${
+                selectedCategory === category
+                  ? 'bg-primary text-white shadow-lg'
+                  : 'bg-white text-gray-700 hover:bg-gray-100'
+              }`}
+            >
+              {category}
+            </motion.button>
+          ))}
+        </motion.div>
+
+        {/* Gallery Grid */}
+        {filteredItems.length > 0 ? (
+          <motion.div
+            layout
+            className="grid md:grid-cols-2 lg:grid-cols-3 gap-6"
+          >
+            {filteredItems.map((item, index) => (
+              <motion.div
+                key={`${item.image}-${index}`}
+                layout
+                initial={{ opacity: 0, scale: 0.9 }}
+                animate={isInView ? { opacity: 1, scale: 1 } : {}}
+                exit={{ opacity: 0, scale: 0.9 }}
+                transition={{ delay: index * 0.05, duration: 0.5 }}
+                whileHover={{ y: -10 }}
+                className="relative group overflow-hidden rounded-xl shadow-lg cursor-pointer h-80"
+              >
+                <Image
+                  src={item.image}
+                  alt={item.title}
+                  fill
+                  className="object-cover transition-transform duration-500 group-hover:scale-110"
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                />
+                
+                {/* Overlay */}
+                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                  <div className="absolute bottom-0 left-0 right-0 p-6 text-white transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
+                    <h3 className="text-xl font-bold mb-2">{item.title}</h3>
+                    <p className="text-sm text-gray-300">{item.category}</p>
+                  </div>
+                </div>
+
+                {/* Hover Border Effect */}
+                <div className="absolute inset-0 border-4 border-primary opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-xl"></div>
+              </motion.div>
+            ))}
+          </motion.div>
+        ) : (
+          <div className="text-center py-12">
+            <p className="text-gray-600">No images found in this category.</p>
+          </div>
+        )}
+
+        {/* CTA */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          animate={isInView ? { opacity: 1, y: 0 } : {}}
+          transition={{ delay: 1, duration: 0.6 }}
+          className="text-center mt-12"
+        >
+          <p className="text-gray-600 mb-4">Want to see more of our work?</p>
+          <motion.div
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+          >
+            <Link
+              href="/contact"
+              className="inline-block bg-primary text-white px-8 py-3 rounded-full font-semibold hover:bg-primary-dark transition-colors"
+            >
+              Contact Us for Portfolio
+            </Link>
+          </motion.div>
+        </motion.div>
+      </div>
+    </section>
+  );
+};
+
+export default Gallery;
