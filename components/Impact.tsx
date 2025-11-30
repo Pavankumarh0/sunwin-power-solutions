@@ -3,10 +3,7 @@
 import { motion } from 'framer-motion';
 import { useInView } from 'framer-motion';
 import { useRef, useState, useEffect } from 'react';
-<<<<<<< HEAD
 import Link from 'next/link';
-=======
->>>>>>> origin/main
 import { FiZap, FiSun, FiUsers, FiTrendingUp, FiAward, FiCheck } from 'react-icons/fi';
 
 const Impact = () => {
@@ -16,11 +13,7 @@ const Impact = () => {
   const stats = [
     {
       icon: <FiZap className="w-8 h-8" />,
-<<<<<<< HEAD
       number: 50,
-=======
-      number: 500,
->>>>>>> origin/main
       suffix: '+',
       label: 'Projects Completed',
       description: 'Solar installations across Tamil Nadu',
@@ -28,11 +21,7 @@ const Impact = () => {
     },
     {
       icon: <FiSun className="w-8 h-8" />,
-<<<<<<< HEAD
       number: 2,
-=======
-      number: 25,
->>>>>>> origin/main
       suffix: 'MW+',
       label: 'Total Capacity Installed',
       description: 'Clean energy generation',
@@ -40,26 +29,15 @@ const Impact = () => {
     },
     {
       icon: <FiUsers className="w-8 h-8" />,
-<<<<<<< HEAD
       number: 100,
       suffix: '+',
       label: 'Happy Customers',
       description: 'Satisfied clients in Tamil Nadu',
-=======
-      number: 1000,
-      suffix: '+',
-      label: 'Happy Customers',
-      description: 'Satisfied clients nationwide',
->>>>>>> origin/main
       color: 'from-green-500 to-green-600',
     },
     {
       icon: <FiTrendingUp className="w-8 h-8" />,
-<<<<<<< HEAD
       number: 1.5,
-=======
-      number: 15,
->>>>>>> origin/main
       suffix: 'K+',
       label: 'Tons CO₂ Reduced',
       description: 'Environmental impact annually',
@@ -68,10 +46,6 @@ const Impact = () => {
   ];
 
   const achievements = [
-<<<<<<< HEAD
-=======
-    'ISO 9001:2015 Certified Company',
->>>>>>> origin/main
     'Authorized Partner with Leading Brands',
     'Expert Team with 10+ Years Experience',
     '24/7 Customer Support & Maintenance',
@@ -80,18 +54,18 @@ const Impact = () => {
   ];
 
   return (
-    <section id="impact" className="py-20 bg-gradient-to-br from-gray-50 to-white relative overflow-hidden" ref={ref}>
+    <section id="impact" className="py-12 sm:py-16 md:py-20 bg-gradient-to-br from-gray-50 to-white relative overflow-hidden" ref={ref}>
       {/* Background Decorations */}
       <div className="absolute top-0 right-0 w-96 h-96 bg-primary/5 rounded-full blur-3xl"></div>
       <div className="absolute bottom-0 left-0 w-96 h-96 bg-green-500/5 rounded-full blur-3xl"></div>
 
-      <div className="container mx-auto px-4 relative z-10">
+      <div className="container mx-auto px-4 sm:px-6 relative z-10">
         {/* Section Header */}
         <motion.div
           initial={{ opacity: 0, y: 50 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.8 }}
-          className="text-center mb-16"
+          className="text-center mb-10 sm:mb-12 md:mb-16"
         >
           <motion.div
             initial={{ scale: 0 }}
@@ -99,20 +73,20 @@ const Impact = () => {
             transition={{ delay: 0.2, type: "spring", stiffness: 200 }}
             className="inline-block mb-4"
           >
-            <div className="bg-primary/10 text-primary px-4 py-2 rounded-full text-sm font-semibold">
+            <div className="bg-primary/10 text-primary px-3 sm:px-4 py-1.5 sm:py-2 rounded-full text-xs sm:text-sm font-semibold">
               Our Impact
             </div>
           </motion.div>
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-800 mb-4">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-800 mb-3 sm:mb-4 px-2">
             Making a <span className="text-primary">Difference</span>
           </h2>
-          <p className="text-gray-600 max-w-2xl mx-auto">
+          <p className="text-gray-600 max-w-2xl mx-auto text-sm sm:text-base px-4">
             Empowering homes and businesses with clean, sustainable energy solutions across Tamil Nadu
           </p>
         </motion.div>
 
         {/* Stats Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 mb-10 sm:mb-12 md:mb-16">
           {stats.map((stat, index) => (
             <motion.div
               key={index}
@@ -130,30 +104,30 @@ const Impact = () => {
           initial={{ opacity: 0, y: 30 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ delay: 0.8, duration: 0.8 }}
-          className="bg-white rounded-2xl shadow-xl p-8 md:p-12"
+          className="bg-white rounded-xl sm:rounded-2xl shadow-xl p-6 sm:p-8 md:p-12"
         >
-          <div className="flex items-center gap-3 mb-8">
-            <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center">
-              <FiAward className="w-6 h-6 text-primary" />
+          <div className="flex items-center gap-3 mb-6 sm:mb-8">
+            <div className="w-10 h-10 sm:w-12 sm:h-12 bg-primary/10 rounded-full flex items-center justify-center flex-shrink-0">
+              <FiAward className="w-5 h-5 sm:w-6 sm:h-6 text-primary" />
             </div>
-            <h3 className="text-2xl md:text-3xl font-bold text-gray-800">
+            <h3 className="text-xl sm:text-2xl md:text-3xl font-bold text-gray-800">
               Why Choose Us
             </h3>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-4">
+          <div className="grid sm:grid-cols-2 gap-3 sm:gap-4">
             {achievements.map((achievement, index) => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, x: -20 }}
                 animate={isInView ? { opacity: 1, x: 0 } : {}}
                 transition={{ delay: 1 + index * 0.1, duration: 0.5 }}
-                className="flex items-start gap-3 p-4 rounded-xl hover:bg-gray-50 transition-colors group"
+                className="flex items-start gap-3 p-3 sm:p-4 rounded-xl hover:bg-gray-50 transition-colors group"
               >
-                <div className="flex-shrink-0 w-6 h-6 bg-green-500 rounded-full flex items-center justify-center mt-0.5 group-hover:scale-110 transition-transform">
-                  <FiCheck className="w-4 h-4 text-white" />
+                <div className="flex-shrink-0 w-5 h-5 sm:w-6 sm:h-6 bg-green-500 rounded-full flex items-center justify-center mt-0.5 group-hover:scale-110 transition-transform">
+                  <FiCheck className="w-3 h-3 sm:w-4 sm:h-4 text-white" />
                 </div>
-                <p className="text-gray-700 font-medium">{achievement}</p>
+                <p className="text-gray-700 font-medium text-sm sm:text-base">{achievement}</p>
               </motion.div>
             ))}
           </div>
@@ -164,36 +138,24 @@ const Impact = () => {
           initial={{ opacity: 0, y: 30 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ delay: 1.5, duration: 0.8 }}
-          className="text-center mt-12"
+          className="text-center mt-8 sm:mt-10 md:mt-12"
         >
-          <p className="text-gray-600 mb-6 text-lg">
-<<<<<<< HEAD
+          <p className="text-gray-600 mb-4 sm:mb-6 text-base sm:text-lg px-4">
             Experience the power of sustainable energy with our reliable solar solutions. Start your journey towards a greener future today.
           </p>
           <motion.div
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
+            className="inline-block"
           >
             <Link
               href="/contact"
-=======
-            Join thousands of satisfied customers who have made the switch to solar
-          </p>
-          <motion.a
-            href="#contact"
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
->>>>>>> origin/main
-            className="inline-flex items-center gap-2 bg-primary text-white px-8 py-4 rounded-full font-semibold hover:bg-primary-dark transition-colors shadow-lg hover:shadow-xl"
-          >
-            Start Your Solar Journey
-            <FiZap className="w-5 h-5" />
-<<<<<<< HEAD
+              className="inline-flex items-center gap-2 bg-primary text-white px-6 sm:px-8 py-3 sm:py-4 rounded-full font-semibold hover:bg-primary-dark transition-colors shadow-lg hover:shadow-xl text-sm sm:text-base"
+            >
+              Start Your Solar Journey
+              <FiZap className="w-4 h-4 sm:w-5 sm:h-5" />
             </Link>
           </motion.div>
-=======
-          </motion.a>
->>>>>>> origin/main
         </motion.div>
       </div>
     </section>
@@ -217,16 +179,12 @@ const StatCard = ({ stat, isInView, index }: { stat: any; isInView: boolean; ind
           setCount(stat.number);
           clearInterval(timer);
         } else {
-<<<<<<< HEAD
           // Handle decimal numbers properly
           if (stat.number % 1 !== 0) {
             setCount(parseFloat(current.toFixed(1)));
-        } else {
-          setCount(Math.floor(current));
+          } else {
+            setCount(Math.floor(current));
           }
-=======
-          setCount(Math.floor(current));
->>>>>>> origin/main
         }
       }, duration / steps);
 
@@ -235,34 +193,32 @@ const StatCard = ({ stat, isInView, index }: { stat: any; isInView: boolean; ind
   }, [isInView, stat.number]);
 
   return (
-    <div className="bg-white rounded-2xl p-6 shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border border-gray-100">
+    <div className="bg-white rounded-xl sm:rounded-2xl p-4 sm:p-6 shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border border-gray-100">
       {/* Icon */}
-      <div className={`w-16 h-16 bg-gradient-to-br ${stat.color} rounded-xl flex items-center justify-center text-white mb-4 shadow-lg`}>
-        {stat.icon}
+      <div className={`w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 bg-gradient-to-br ${stat.color} rounded-xl flex items-center justify-center text-white mb-3 sm:mb-4 shadow-lg`}>
+        <div className="w-6 h-6 sm:w-7 sm:h-7 md:w-8 md:h-8">
+          {stat.icon}
+        </div>
       </div>
 
       {/* Number with Counter Animation */}
       <div className="mb-2">
-        <span className="text-4xl md:text-5xl font-bold text-gray-800">
-<<<<<<< HEAD
+        <span className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-800">
           {typeof count === 'number' && count % 1 !== 0 ? count.toFixed(1) : count.toLocaleString()}
-=======
-          {count.toLocaleString()}
->>>>>>> origin/main
         </span>
-        <span className="text-3xl md:text-4xl font-bold text-primary ml-1">
+        <span className="text-2xl sm:text-3xl md:text-4xl font-bold text-primary ml-1">
           {stat.suffix}
         </span>
       </div>
 
       {/* Label */}
-      <h4 className="text-lg font-semibold text-gray-800 mb-2">{stat.label}</h4>
+      <h4 className="text-base sm:text-lg font-semibold text-gray-800 mb-1 sm:mb-2">{stat.label}</h4>
 
       {/* Description */}
-      <p className="text-gray-600 text-sm">{stat.description}</p>
+      <p className="text-gray-600 text-xs sm:text-sm">{stat.description}</p>
 
       {/* Progress Bar Animation */}
-      <div className="mt-4 h-1 bg-gray-200 rounded-full overflow-hidden">
+      <div className="mt-3 sm:mt-4 h-1 bg-gray-200 rounded-full overflow-hidden">
         <motion.div
           initial={{ width: 0 }}
           animate={isInView ? { width: '100%' } : {}}
@@ -275,4 +231,3 @@ const StatCard = ({ stat, isInView, index }: { stat: any; isInView: boolean; ind
 };
 
 export default Impact;
-

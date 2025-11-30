@@ -3,19 +3,14 @@
 import { motion } from 'framer-motion';
 import Link from 'next/link';
 import Image from 'next/image';
-<<<<<<< HEAD
 import { FiPhone, FiMail, FiMapPin } from 'react-icons/fi';
 import { FaFacebook, FaInstagram } from 'react-icons/fa';
-=======
-import { FiPhone, FiMail, FiMapPin, FiFacebook, FiTwitter, FiLinkedin, FiInstagram } from 'react-icons/fi';
->>>>>>> origin/main
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
 
   const footerLinks = {
     'Quick Links': [
-<<<<<<< HEAD
       { name: 'Home', href: '/' },
       { name: 'About Us', href: '/about' },
       { name: 'Services', href: '/services' },
@@ -28,33 +23,12 @@ const Footer = () => {
       { name: 'Maintenance & Repair', href: '/services' },
       { name: 'Solar Street Lights', href: '/services' },
       { name: 'Inverter Battery', href: '/services' },
-=======
-      { name: 'Home', href: '#home' },
-      { name: 'About Us', href: '#about' },
-      { name: 'Services', href: '#services' },
-      { name: 'Gallery', href: '#gallery' },
-      { name: 'Contact', href: '#contact' },
-    ],
-    'Our Services': [
-      { name: 'Solar Panel Installation', href: '#services' },
-      { name: 'On Grid Solar Systems', href: '#services' },
-      { name: 'Maintenance & Repair', href: '#services' },
-      { name: 'Solar Street Lights', href: '#services' },
-      { name: 'Inverter Battery', href: '#services' },
->>>>>>> origin/main
     ],
   };
 
   const socialLinks = [
-<<<<<<< HEAD
     { icon: <FaFacebook />, href: 'https://www.facebook.com/share/1aYE6fbSHh/', label: 'Facebook', target: '_blank', rel: 'noopener noreferrer' },
     { icon: <FaInstagram />, href: 'https://www.instagram.com/sunwinps?igsh=MWtuaHhuNDhmdHl3dg==', label: 'Instagram', target: '_blank', rel: 'noopener noreferrer' },
-=======
-    { icon: <FiFacebook />, href: '#', label: 'Facebook' },
-    { icon: <FiTwitter />, href: '#', label: 'Twitter' },
-    { icon: <FiLinkedin />, href: '#', label: 'LinkedIn' },
-    { icon: <FiInstagram />, href: '#', label: 'Instagram' },
->>>>>>> origin/main
   ];
 
   return (
@@ -73,23 +47,15 @@ const Footer = () => {
               />
             </Link>
             <p className="text-sm mb-4 leading-relaxed">
-<<<<<<< HEAD
               Leading service provider of solar renewable energy solutions. Expertise in custom solar power systems for residential, commercial and industries sectors. Delivering high quality, reliability and sustainable power solutions.
-=======
-              Leading provider of solar renewable energy solutions in Chennai, Tamil Nadu. 
-              Empowering sustainable future with innovative solar technology.
->>>>>>> origin/main
             </p>
             <div className="flex gap-3">
               {socialLinks.map((social, index) => (
                 <motion.a
                   key={index}
                   href={social.href}
-<<<<<<< HEAD
                   target={social.target || '_self'}
                   rel={social.rel || ''}
-=======
->>>>>>> origin/main
                   whileHover={{ scale: 1.1, y: -2 }}
                   className="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-primary transition-colors"
                   aria-label={social.label}
@@ -127,47 +93,27 @@ const Footer = () => {
               <li className="flex items-start gap-3">
                 <FiMapPin className="w-5 h-5 text-primary flex-shrink-0 mt-1" />
                 <span className="text-sm">
-<<<<<<< HEAD
                   Plot No-19, Shop #4 Janakiram Nagar<br />
                   Kadappa Road, Puthagaram<br />
                   Kollathur Teachers Colony<br />
                   Chennai 600 099, Tamil Nadu, India
-=======
-                  Plot No.19, Kadappa Road, Janki Raman Nagar<br />
-                  Chennai-600099, Tamil Nadu
->>>>>>> origin/main
                 </span>
               </li>
               <li className="flex items-center gap-3">
                 <FiPhone className="w-5 h-5 text-primary flex-shrink-0" />
                 <div className="text-sm">
-<<<<<<< HEAD
                   <a href="tel:+919500164901" className="hover:text-primary transition-colors block">
                     +91 9500164901
-=======
-                  <a href="tel:+917200604242" className="hover:text-primary transition-colors">
-                    +91 72006 04242
-                  </a>
-                  <br />
-                  <a href="tel:+919952730863" className="hover:text-primary transition-colors">
-                    +91 99527 30863
->>>>>>> origin/main
                   </a>
                 </div>
               </li>
               <li className="flex items-center gap-3">
                 <FiMail className="w-5 h-5 text-primary flex-shrink-0" />
-<<<<<<< HEAD
                 <div className="text-sm">
                   <a href="mailto:sunwinps@gmail.com" className="hover:text-primary transition-colors block">
                     sunwinps@gmail.com
-                </a>
+                  </a>
                 </div>
-=======
-                <a href="mailto:info@sunwinpower.com" className="text-sm hover:text-primary transition-colors">
-                  info@sunwinpower.com
-                </a>
->>>>>>> origin/main
               </li>
             </ul>
           </div>
@@ -192,11 +138,7 @@ const Footer = () => {
             </div>
           </div>
           <p className="text-xs text-gray-500 text-center mt-4">
-<<<<<<< HEAD
             Proprietor: Sugantha N
-=======
-            GST No: 33CGWPN8077Q1Z3 | Proprietor: Sugantha N
->>>>>>> origin/main
           </p>
         </div>
       </div>

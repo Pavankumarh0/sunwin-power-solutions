@@ -4,17 +4,13 @@ import { motion } from 'framer-motion';
 import { useInView } from 'framer-motion';
 import { useRef } from 'react';
 import Image from 'next/image';
-<<<<<<< HEAD
 import Link from 'next/link';
-=======
->>>>>>> origin/main
 import { FiCheckCircle } from 'react-icons/fi';
 
 const About = () => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
-<<<<<<< HEAD
   const solarCompetencies = [
     'Installation & commissioning of rooftop solar systems (Residential, Commercial & Industrial)',
     'Ground-mounted solar plant installation for kW-MW scale projects',
@@ -25,50 +21,32 @@ const About = () => {
     'Long-term O&M services for Solar power plants'
   ];
 
-
   const keyHighlights = [
     'Capacity Range: From kW to MW scale',
     'Projects Turnkey solutions from design to commissioning',
     'Compliance with national and international standards',
     'Experienced engineering and project management team',
     'Assured quality, safety, and timely delivery'
-=======
-  const features = [
-    'Over 1 year of industry experience',
-    'ISO certified quality standards',
-    'Expert team of professionals',
-    '24/7 customer support',
-    'Competitive pricing',
-    'Warranty on all installations',
->>>>>>> origin/main
   ];
 
   return (
-    <section id="about" className="py-20 bg-gray-50" ref={ref}>
-      <div className="container mx-auto px-4">
+    <section id="about" className="py-12 sm:py-16 md:py-20 bg-gray-50" ref={ref}>
+      <div className="container mx-auto px-4 sm:px-6">
         <motion.div
           initial={{ opacity: 0, y: 50 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.8 }}
-          className="text-center mb-16"
+          className="text-center mb-10 sm:mb-12 md:mb-16"
         >
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-800 mb-4">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-800 mb-3 sm:mb-4 px-2">
             About <span className="text-primary">Sunwin Power Solutions</span>
           </h2>
-          <p className="text-gray-600 max-w-2xl mx-auto">
-<<<<<<< HEAD
+          <p className="text-gray-600 max-w-2xl mx-auto text-sm sm:text-base px-4">
             Leading service provider of solar renewable energy solutions. Expertise in custom solar power systems for residential, commercial and industries sectors. Delivering high quality, reliability and sustainable power solutions.
           </p>
         </motion.div>
 
-        <div className="grid md:grid-cols-2 gap-12 items-center mb-16">
-=======
-            Leading provider of sustainable solar energy solutions in Chennai, Tamil Nadu
-          </p>
-        </motion.div>
-
-        <div className="grid md:grid-cols-2 gap-12 items-center">
->>>>>>> origin/main
+        <div className="grid md:grid-cols-2 gap-8 sm:gap-10 md:gap-12 items-center mb-10 sm:mb-12 md:mb-16">
           {/* Image Section */}
           <motion.div
             initial={{ opacity: 0, x: -50 }}
@@ -76,7 +54,7 @@ const About = () => {
             transition={{ duration: 0.8, delay: 0.2 }}
             className="relative"
           >
-            <div className="relative h-[400px] md:h-[500px] rounded-2xl overflow-hidden shadow-2xl">
+            <div className="relative h-[300px] sm:h-[400px] md:h-[500px] rounded-xl sm:rounded-2xl overflow-hidden shadow-2xl">
               <Image
                 src="https://images.unsplash.com/photo-1509391366360-2e959784a276?q=80&w=1000"
                 alt="Solar Installation"
@@ -85,16 +63,12 @@ const About = () => {
               />
             </div>
             <motion.div
-              className="absolute -bottom-6 -right-6 bg-primary text-white p-6 rounded-xl shadow-xl"
+              className="absolute -bottom-4 -right-4 sm:-bottom-6 sm:-right-6 bg-primary text-white p-4 sm:p-6 rounded-xl shadow-xl"
               animate={{ y: [0, -10, 0] }}
               transition={{ duration: 2, repeat: Infinity }}
             >
-<<<<<<< HEAD
-              <p className="text-3xl font-bold">20+</p>
-=======
-              <p className="text-3xl font-bold">1+</p>
->>>>>>> origin/main
-              <p className="text-sm">Years Experience</p>
+              <p className="text-2xl sm:text-3xl font-bold">20+</p>
+              <p className="text-xs sm:text-sm">Years Experience</p>
             </motion.div>
           </motion.div>
 
@@ -104,30 +78,29 @@ const About = () => {
             animate={isInView ? { opacity: 1, x: 0 } : {}}
             transition={{ duration: 0.8, delay: 0.4 }}
           >
-            <h3 className="text-3xl font-bold text-gray-800 mb-6">
-<<<<<<< HEAD
+            <h3 className="text-2xl sm:text-3xl font-bold text-gray-800 mb-4 sm:mb-6">
               Over Two Decades of Expertise in Solar Energy Sector
             </h3>
-            <p className="text-gray-600 mb-6 leading-relaxed">
+            <p className="text-gray-600 mb-4 sm:mb-6 leading-relaxed text-sm sm:text-base">
               With more than 20 years of proven experience, we have deep technical knowledge, strong execution 
               capabilities in the Solar Energy sector. Our experience in the renewable energy industry 
               enables us to deliver reliable, efficient, and future-ready solutions for projects of all scales.
             </p>
-            <p className="text-gray-600 mb-8 leading-relaxed">
+            <p className="text-gray-600 mb-6 sm:mb-8 leading-relaxed text-sm sm:text-base">
               Our mission is to empower you to "Power it Yourself" by providing the most advanced and reliable 
               solar energy systems tailored to your unique needs. With a focus on quality, efficiency, 
               and environmental responsibility, we deliver sustainable energy solutions that make a real difference.
             </p>
 
-                <motion.div
+            <motion.div
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >
               <Link
                 href="/contact"
-              className="inline-block bg-primary text-white px-8 py-3 rounded-full font-semibold hover:bg-primary-dark transition-colors"
-            >
-              Learn More
+                className="inline-block bg-primary text-white px-6 sm:px-8 py-2.5 sm:py-3 rounded-full font-semibold hover:bg-primary-dark transition-colors text-sm sm:text-base"
+              >
+                Learn More
               </Link>
             </motion.div>
           </motion.div>
@@ -138,9 +111,9 @@ const About = () => {
           initial={{ opacity: 0, y: 50 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ delay: 0.6, duration: 0.8 }}
-          className="mb-16"
+          className="mb-10 sm:mb-12 md:mb-16"
         >
-          <h3 className="text-3xl font-bold text-gray-800 mb-8 text-center">
+          <h3 className="text-2xl sm:text-3xl font-bold text-gray-800 mb-6 sm:mb-8 text-center px-2">
             Our Core Competencies Includes:
           </h3>
           
@@ -150,22 +123,22 @@ const About = () => {
               initial={{ opacity: 0, y: 50 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ delay: 0.8, duration: 0.8 }}
-              className="bg-white p-6 rounded-xl shadow-lg"
+              className="bg-white p-4 sm:p-6 rounded-xl shadow-lg"
             >
-              <h4 className="text-2xl font-bold text-gray-800 mb-4 underline">
+              <h4 className="text-xl sm:text-2xl font-bold text-gray-800 mb-3 sm:mb-4 underline">
                 Solar Energy Solutions
               </h4>
-              <ul className="space-y-3">
+              <ul className="space-y-2 sm:space-y-3">
                 {solarCompetencies.map((item, index) => (
                   <motion.li
                     key={index}
                     initial={{ opacity: 0, x: -20 }}
                     animate={isInView ? { opacity: 1, x: 0 } : {}}
                     transition={{ delay: 0.9 + index * 0.1 }}
-                    className="flex items-start gap-3"
+                    className="flex items-start gap-2 sm:gap-3"
                   >
-                    <FiCheckCircle className="text-primary text-xl flex-shrink-0 mt-0.5" />
-                    <span className="text-gray-700">{item}</span>
+                    <FiCheckCircle className="text-primary text-lg sm:text-xl flex-shrink-0 mt-0.5" />
+                    <span className="text-gray-700 text-sm sm:text-base">{item}</span>
                   </motion.li>
                 ))}
               </ul>
@@ -178,73 +151,27 @@ const About = () => {
           initial={{ opacity: 0, y: 50 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ delay: 1.2, duration: 0.8 }}
-          className="bg-gradient-to-r from-primary to-primary-dark text-white rounded-2xl p-8 md:p-12"
+          className="bg-gradient-to-r from-primary to-primary-dark text-white rounded-xl sm:rounded-2xl p-6 sm:p-8 md:p-12"
         >
-          <h3 className="text-3xl font-bold mb-8 text-center">Key Highlights</h3>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <h3 className="text-2xl sm:text-3xl font-bold mb-6 sm:mb-8 text-center">Key Highlights</h3>
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
             {keyHighlights.map((highlight, index) => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, scale: 0.9 }}
                 animate={isInView ? { opacity: 1, scale: 1 } : {}}
                 transition={{ delay: 1.3 + index * 0.1 }}
-                className="flex items-start gap-3"
+                className="flex items-start gap-2 sm:gap-3"
               >
-                <FiCheckCircle className="text-white text-xl flex-shrink-0 mt-1" />
-                <span className="text-gray-100">{highlight}</span>
+                <FiCheckCircle className="text-white text-lg sm:text-xl flex-shrink-0 mt-1" />
+                <span className="text-gray-100 text-sm sm:text-base">{highlight}</span>
               </motion.div>
             ))}
           </div>
         </motion.div>
-=======
-              Providing Renewable Energy Solutions
-            </h3>
-            <p className="text-gray-600 mb-6 leading-relaxed">
-              We are a leading provider of solar renewable energy solutions, committed to helping 
-              businesses and individuals harness the power of the sun. Based in Chennai, Tamil Nadu, 
-              we specialize in providing comprehensive solar energy systems including installation, 
-              maintenance, and repair services.
-            </p>
-            <p className="text-gray-600 mb-8 leading-relaxed">
-              Our mission is to empower you to "Power it Yourself" by providing the most advanced 
-              and reliable solar energy systems tailored to your unique needs. With a focus on 
-              quality, efficiency, and environmental responsibility, we deliver sustainable energy 
-              solutions that make a real difference.
-            </p>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8">
-              {features.map((feature, index) => (
-                <motion.div
-                  key={index}
-                  initial={{ opacity: 0, x: -20 }}
-                  animate={isInView ? { opacity: 1, x: 0 } : {}}
-                  transition={{ delay: 0.6 + index * 0.1 }}
-                  className="flex items-center gap-3"
-                >
-                  <FiCheckCircle className="text-primary text-xl flex-shrink-0" />
-                  <span className="text-gray-700">{feature}</span>
-                </motion.div>
-              ))}
-            </div>
-
-            <motion.a
-              href="#contact"
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-              className="inline-block bg-primary text-white px-8 py-3 rounded-full font-semibold hover:bg-primary-dark transition-colors"
-            >
-              Learn More
-            </motion.a>
-          </motion.div>
-        </div>
->>>>>>> origin/main
       </div>
     </section>
   );
 };
 
 export default About;
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/main

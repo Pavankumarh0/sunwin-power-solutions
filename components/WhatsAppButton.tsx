@@ -4,11 +4,7 @@ import { motion } from 'framer-motion';
 import { FaWhatsapp } from 'react-icons/fa';
 
 const WhatsAppButton = () => {
-<<<<<<< HEAD
   const phoneNumber = '919500164901'; // Remove + and spaces
-=======
-  const phoneNumber = '917200604242'; // Remove + and spaces
->>>>>>> origin/main
   const message = 'Hello! I am interested in your solar energy solutions.';
   const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
 
@@ -17,7 +13,7 @@ const WhatsAppButton = () => {
       href={whatsappUrl}
       target="_blank"
       rel="noopener noreferrer"
-      className="fixed bottom-8 left-8 z-50 bg-green-500 text-white p-4 rounded-full shadow-lg hover:bg-green-600 transition-colors"
+      className="fixed bottom-4 sm:bottom-6 md:bottom-8 left-4 sm:left-6 md:left-8 z-50 bg-green-500 text-white p-3 sm:p-4 rounded-full shadow-lg hover:bg-green-600 transition-colors"
       whileHover={{ scale: 1.1 }}
       whileTap={{ scale: 0.9 }}
       animate={{
@@ -30,10 +26,9 @@ const WhatsAppButton = () => {
       }}
       aria-label="Chat on WhatsApp"
     >
-      <FaWhatsapp size={32} />
+      <FaWhatsapp size={28} className="sm:w-8 sm:h-8" />
     </motion.a>
   );
 };
 
 export default WhatsAppButton;
-

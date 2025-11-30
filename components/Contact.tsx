@@ -83,36 +83,24 @@ const Contact = () => {
     {
       icon: <FiPhone className="w-6 h-6" />,
       title: 'Phone',
-<<<<<<< HEAD
       details: ['+91 9500164901'],
-=======
-      details: ['+91 72006 04242', '+91 99527 30863'],
->>>>>>> origin/main
       type: 'phone',
     },
     {
       icon: <FiMail className="w-6 h-6" />,
       title: 'Email',
-<<<<<<< HEAD
       details: ['sunwinps@gmail.com'],
-=======
-      details: ['info@sunwinpower.com', 'sales@sunwinpower.com'],
->>>>>>> origin/main
       type: 'email',
     },
     {
       icon: <FiMapPin className="w-6 h-6" />,
       title: 'Address',
-<<<<<<< HEAD
       details: [
         'Plot No-19, Shop #4 Janakiram Nagar',
         'Kadappa Road, Puthagaram',
         'Kollathur Teachers Colony',
         'Chennai 600 099, Tamil Nadu, India'
       ],
-=======
-      details: ['Plot No.19, Kadappa Road', 'Chennai - 600099, Tamil Nadu'],
->>>>>>> origin/main
       type: 'address',
     },
   ];
@@ -204,7 +192,6 @@ const Contact = () => {
                   className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition"
                 >
                   <option value="">Select a service</option>
-<<<<<<< HEAD
                   <option value="Rooftop Solar System for Residential">Rooftop Solar System for Residential</option>
                   <option value="Rooftop Solar System for Commercial">Rooftop Solar System for Commercial</option>
                   <option value="Rooftop Solar systems for industrial Buildings">Rooftop Solar systems for industrial Buildings</option>
@@ -213,14 +200,6 @@ const Contact = () => {
                   <option value="Energy Audit">Energy Audit</option>
                   <option value="Consultancy">Consultancy</option>
                   <option value="Others">Others</option>
-=======
-                  <option value="Solar Panel Installation">Solar Panel Installation</option>
-                  <option value="On Grid Solar Systems">On Grid Solar Systems</option>
-                  <option value="Maintenance & Repair">Maintenance & Repair</option>
-                  <option value="Solar Street Lights">Solar Street Lights</option>
-                  <option value="Inverter Battery">Inverter Battery</option>
-                  <option value="Other">Other</option>
->>>>>>> origin/main
                 </select>
               </div>
 
@@ -311,12 +290,6 @@ const Contact = () => {
               <h3 className="text-2xl font-bold mb-4">Business Hours</h3>
               <p className="mb-2">Monday - Saturday: 8:00 AM - 7:00 PM</p>
               <p className="mb-4">Sunday: Closed</p>
-<<<<<<< HEAD
-=======
-              <p className="text-sm opacity-90 mt-6">
-                GST No: 33CGWPN8077Q1Z3
-              </p>
->>>>>>> origin/main
             </motion.div>
           </motion.div>
         </div>
