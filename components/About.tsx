@@ -4,13 +4,17 @@ import { motion } from 'framer-motion';
 import { useInView } from 'framer-motion';
 import { useRef } from 'react';
 import Image from 'next/image';
+<<<<<<< HEAD
 import Link from 'next/link';
+=======
+>>>>>>> origin/main
 import { FiCheckCircle } from 'react-icons/fi';
 
 const About = () => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
+<<<<<<< HEAD
   const solarCompetencies = [
     'Installation & commissioning of rooftop solar systems (Residential, Commercial & Industrial)',
     'Ground-mounted solar plant installation for kW-MW scale projects',
@@ -28,6 +32,15 @@ const About = () => {
     'Compliance with national and international standards',
     'Experienced engineering and project management team',
     'Assured quality, safety, and timely delivery'
+=======
+  const features = [
+    'Over 1 year of industry experience',
+    'ISO certified quality standards',
+    'Expert team of professionals',
+    '24/7 customer support',
+    'Competitive pricing',
+    'Warranty on all installations',
+>>>>>>> origin/main
   ];
 
   return (
@@ -43,11 +56,19 @@ const About = () => {
             About <span className="text-primary">Sunwin Power Solutions</span>
           </h2>
           <p className="text-gray-600 max-w-2xl mx-auto">
+<<<<<<< HEAD
             Leading service provider of solar renewable energy solutions. Expertise in custom solar power systems for residential, commercial and industries sectors. Delivering high quality, reliability and sustainable power solutions.
           </p>
         </motion.div>
 
         <div className="grid md:grid-cols-2 gap-12 items-center mb-16">
+=======
+            Leading provider of sustainable solar energy solutions in Chennai, Tamil Nadu
+          </p>
+        </motion.div>
+
+        <div className="grid md:grid-cols-2 gap-12 items-center">
+>>>>>>> origin/main
           {/* Image Section */}
           <motion.div
             initial={{ opacity: 0, x: -50 }}
@@ -68,7 +89,11 @@ const About = () => {
               animate={{ y: [0, -10, 0] }}
               transition={{ duration: 2, repeat: Infinity }}
             >
+<<<<<<< HEAD
               <p className="text-3xl font-bold">20+</p>
+=======
+              <p className="text-3xl font-bold">1+</p>
+>>>>>>> origin/main
               <p className="text-sm">Years Experience</p>
             </motion.div>
           </motion.div>
@@ -80,6 +105,7 @@ const About = () => {
             transition={{ duration: 0.8, delay: 0.4 }}
           >
             <h3 className="text-3xl font-bold text-gray-800 mb-6">
+<<<<<<< HEAD
               Over Two Decades of Expertise in Solar Energy Sector
             </h3>
             <p className="text-gray-600 mb-6 leading-relaxed">
@@ -170,9 +196,55 @@ const About = () => {
             ))}
           </div>
         </motion.div>
+=======
+              Providing Renewable Energy Solutions
+            </h3>
+            <p className="text-gray-600 mb-6 leading-relaxed">
+              We are a leading provider of solar renewable energy solutions, committed to helping 
+              businesses and individuals harness the power of the sun. Based in Chennai, Tamil Nadu, 
+              we specialize in providing comprehensive solar energy systems including installation, 
+              maintenance, and repair services.
+            </p>
+            <p className="text-gray-600 mb-8 leading-relaxed">
+              Our mission is to empower you to "Power it Yourself" by providing the most advanced 
+              and reliable solar energy systems tailored to your unique needs. With a focus on 
+              quality, efficiency, and environmental responsibility, we deliver sustainable energy 
+              solutions that make a real difference.
+            </p>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8">
+              {features.map((feature, index) => (
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, x: -20 }}
+                  animate={isInView ? { opacity: 1, x: 0 } : {}}
+                  transition={{ delay: 0.6 + index * 0.1 }}
+                  className="flex items-center gap-3"
+                >
+                  <FiCheckCircle className="text-primary text-xl flex-shrink-0" />
+                  <span className="text-gray-700">{feature}</span>
+                </motion.div>
+              ))}
+            </div>
+
+            <motion.a
+              href="#contact"
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              className="inline-block bg-primary text-white px-8 py-3 rounded-full font-semibold hover:bg-primary-dark transition-colors"
+            >
+              Learn More
+            </motion.a>
+          </motion.div>
+        </div>
+>>>>>>> origin/main
       </div>
     </section>
   );
 };
 
 export default About;
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/main

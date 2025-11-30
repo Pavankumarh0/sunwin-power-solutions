@@ -3,7 +3,11 @@ import Hero from '@/components/Hero';
 import About from '@/components/About';
 import Services from '@/components/Services';
 import Impact from '@/components/Impact';
+<<<<<<< HEAD
 import GalleryPreview from '@/components/GalleryPreview';
+=======
+import Gallery from '@/components/Gallery';
+>>>>>>> origin/main
 import Contact from '@/components/Contact';
 import Footer from '@/components/Footer';
 import ScrollToTop from '@/components/ScrollToTop';
@@ -17,7 +21,11 @@ export default function Home() {
       <About />
       <Services />
       <Impact />
+<<<<<<< HEAD
       <GalleryPreview />
+=======
+      <Gallery />
+>>>>>>> origin/main
       <Contact />
       <Footer />
       <ScrollToTop />

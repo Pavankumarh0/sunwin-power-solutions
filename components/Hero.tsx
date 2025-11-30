@@ -3,6 +3,7 @@
 import { motion } from 'framer-motion';
 import { FiArrowRight } from 'react-icons/fi';
 import Image from 'next/image';
+<<<<<<< HEAD
 import Link from 'next/link';
 import { useState, useRef, useEffect } from 'react';
 
@@ -58,6 +59,22 @@ const Hero = () => {
         
         {/* Black dim overlay for text readability */}
         <div className="absolute inset-0 bg-black/70"></div>
+=======
+
+const Hero = () => {
+  return (
+    <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden pt-24 sm:pt-32">
+      {/* Background Image */}
+      <div className="absolute inset-0 z-0">
+        <Image
+          src="https://images.unsplash.com/photo-1509391366360-2e959784a276?q=80&w=2072"
+          alt="Solar Panels"
+          fill
+          className="object-cover"
+          priority
+        />
+        <div className="absolute inset-0 bg-gradient-to-r from-secondary/90 to-secondary/70"></div>
+>>>>>>> origin/main
       </div>
 
       {/* Floating Solar Panel Animation */}
@@ -105,7 +122,12 @@ const Hero = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.4, duration: 0.8 }}
           >
+<<<<<<< HEAD
             Leading service provider of solar renewable energy solutions. Expertise in custom solar power systems for residential, commercial and industries sectors. Delivering high quality, reliability and sustainable power solutions.
+=======
+            Leading provider of solar renewable energy solutions in Chennai, Tamil Nadu. 
+            Transform your energy consumption with our innovative solar technology.
+>>>>>>> origin/main
           </motion.p>
 
           <motion.div
@@ -114,6 +136,7 @@ const Hero = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.6, duration: 0.8 }}
           >
+<<<<<<< HEAD
             <motion.div
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
@@ -137,6 +160,25 @@ const Hero = () => {
               Our Services
               </Link>
             </motion.div>
+=======
+            <motion.a
+              href="#contact"
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              className="bg-primary text-white px-8 py-4 rounded-full font-semibold flex items-center gap-2 hover:bg-primary-dark transition-colors shadow-lg"
+            >
+              Get Started
+              <FiArrowRight />
+            </motion.a>
+            <motion.a
+              href="#services"
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              className="bg-white text-secondary px-8 py-4 rounded-full font-semibold hover:bg-gray-100 transition-colors shadow-lg"
+            >
+              Our Services
+            </motion.a>
+>>>>>>> origin/main
           </motion.div>
         </motion.div>
       </div>

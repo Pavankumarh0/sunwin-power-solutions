@@ -4,7 +4,11 @@ import { motion } from 'framer-motion';
 import { FaWhatsapp } from 'react-icons/fa';
 
 const WhatsAppButton = () => {
+<<<<<<< HEAD
   const phoneNumber = '919500164901'; // Remove + and spaces
+=======
+  const phoneNumber = '917200604242'; // Remove + and spaces
+>>>>>>> origin/main
   const message = 'Hello! I am interested in your solar energy solutions.';
   const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
 

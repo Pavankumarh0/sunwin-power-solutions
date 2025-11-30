@@ -4,7 +4,10 @@ import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { FiMenu, FiX, FiPhone, FiMail } from 'react-icons/fi';
+<<<<<<< HEAD
 import { FaFacebook, FaInstagram } from 'react-icons/fa';
+=======
+>>>>>>> origin/main
 import Image from 'next/image';
 
 const Navbar = () => {
@@ -20,12 +23,21 @@ const Navbar = () => {
   }, []);
 
   const navItems = [
+<<<<<<< HEAD
     { name: 'Home', href: '/' },
     { name: 'About', href: '/about' },
     { name: 'Services', href: '/services' },
     { name: 'Impact', href: '/impact' },
     { name: 'Gallery', href: '/gallery' },
     { name: 'Contact', href: '/contact' },
+=======
+    { name: 'Home', href: '#home' },
+    { name: 'About', href: '#about' },
+    { name: 'Services', href: '#services' },
+    { name: 'Impact', href: '#impact' },
+    { name: 'Gallery', href: '#gallery' },
+    { name: 'Contact', href: '#contact' },
+>>>>>>> origin/main
   ];
 
   return (
@@ -36,6 +48,7 @@ const Navbar = () => {
       <div className="bg-primary text-white py-2 overflow-hidden shadow-sm">
         <div className="container mx-auto px-4 flex justify-between items-center text-xs sm:text-sm">
           <div className="flex items-center gap-2 sm:gap-4 flex-shrink min-w-0">
+<<<<<<< HEAD
             <a href="tel:+919500164901" className="flex items-center gap-1 sm:gap-2 hover:text-gray-200 whitespace-nowrap">
               <FiPhone className="flex-shrink-0" size={14} /> 
               <span className="hidden xs:inline">+91 9500164901</span>
@@ -64,6 +77,19 @@ const Navbar = () => {
             >
               <FaInstagram size={16} />
             </a>
+=======
+            <a href="tel:+917200604242" className="flex items-center gap-1 sm:gap-2 hover:text-gray-200 whitespace-nowrap">
+              <FiPhone className="flex-shrink-0" size={14} /> 
+              <span className="hidden xs:inline">+91 72006 04242</span>
+              <span className="xs:hidden text-xs">Call</span>
+            </a>
+            <a href="mailto:info@sunwinpower.com" className="hidden sm:flex items-center gap-2 hover:text-gray-200">
+              <FiMail /> info@sunwinpower.com
+            </a>
+          </div>
+          <div className="text-xs hidden sm:block flex-shrink-0">
+            GST: 33CGWPN8077Q1Z3
+>>>>>>> origin/main
           </div>
         </div>
       </div>
@@ -80,9 +106,15 @@ const Navbar = () => {
               <Image
                 src="/images/logo/sw logo.png"
                 alt="Sunwin Power Solutions Logo"
+<<<<<<< HEAD
                 width={240}
                 height={80}
                 className="h-14 sm:h-16 md:h-20 w-auto"
+=======
+                width={180}
+                height={60}
+                className="h-10 sm:h-12 w-auto"
+>>>>>>> origin/main
                 priority
               />
             </motion.div>
@@ -99,6 +131,7 @@ const Navbar = () => {
                 {item.name}
               </Link>
             ))}
+<<<<<<< HEAD
             <motion.div
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
@@ -110,6 +143,16 @@ const Navbar = () => {
               Get Quote
               </Link>
             </motion.div>
+=======
+            <motion.a
+              href="#contact"
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              className="bg-primary text-white px-6 py-2 rounded-full hover:bg-primary-dark transition-colors"
+            >
+              Get Quote
+            </motion.a>
+>>>>>>> origin/main
           </div>
 
           {/* Mobile Menu Button */}
@@ -158,13 +201,22 @@ const Navbar = () => {
               transition={{ delay: navItems.length * 0.05 }}
               className="mt-2"
             >
+<<<<<<< HEAD
               <Link
                 href="/contact"
+=======
+              <a
+                href="#contact"
+>>>>>>> origin/main
                 onClick={() => setIsOpen(false)}
                 className="block bg-primary text-white px-6 py-3 rounded-full text-center hover:bg-primary-dark transition-all shadow-md hover:shadow-lg"
               >
                 Get Quote
+<<<<<<< HEAD
               </Link>
+=======
+              </a>
+>>>>>>> origin/main
             </motion.div>
           </div>
         </motion.div>

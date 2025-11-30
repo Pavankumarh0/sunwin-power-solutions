@@ -1,6 +1,10 @@
 # Sunwin Power Solutions
 
+<<<<<<< HEAD
 A modern, responsive website for Sunwin Power Solutions - leading service provider of solar renewable energy solutions. Expertise in custom solar power systems for residential, commercial and industries sectors. Delivering high quality, reliability and sustainable power solutions.
+=======
+A modern, responsive website for Sunwin Power Solutions - a leading solar energy company in Chennai, Tamil Nadu.
+>>>>>>> origin/main
 
 ## Features
 
@@ -187,5 +191,9 @@ service cloud.firestore {
 
 ## Support
 
+<<<<<<< HEAD
 For support, email sunwinps@gmail.com or call +91 9500164901.
+=======
+For support, email info@sunwinpower.com or call +91 72006 04242.
+>>>>>>> origin/main
 

@@ -4,7 +4,11 @@ import nodemailer from 'nodemailer';
 export async function GET() {
   try {
     // Get email configuration from environment variables
+<<<<<<< HEAD
     const adminEmail = process.env.ADMIN_EMAIL || 'sunwinps@gmail.com';
+=======
+    const adminEmail = process.env.ADMIN_EMAIL || 'pavankumarhox56@gmail.com';
+>>>>>>> origin/main
     const smtpHost = process.env.SMTP_HOST || 'smtp.gmail.com';
     const smtpPort = parseInt(process.env.SMTP_PORT || '587');
     const smtpUser = process.env.SMTP_USER;
@@ -16,6 +20,7 @@ export async function GET() {
         { 
           success: false, 
           error: 'SMTP credentials not configured',
+<<<<<<< HEAD
           message: 'Please add SMTP_USER and SMTP_PASSWORD to .env.local file',
           debug: {
             smtpUserExists: !!smtpUser,
@@ -30,6 +35,9 @@ export async function GET() {
             '3. Add: SMTP_PASSWORD=vchtpgapdqcnkxu',
             '4. Restart your development server (npm run dev)'
           ]
+=======
+          message: 'Please add SMTP_USER and SMTP_PASSWORD to .env.local file'
+>>>>>>> origin/main
         },
         { status: 400 }
       );

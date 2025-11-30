@@ -3,7 +3,10 @@
 import { motion } from 'framer-motion';
 import { useInView } from 'framer-motion';
 import { useRef, useState, useEffect } from 'react';
+<<<<<<< HEAD
 import Link from 'next/link';
+=======
+>>>>>>> origin/main
 import { FiZap, FiSun, FiUsers, FiTrendingUp, FiAward, FiCheck } from 'react-icons/fi';
 
 const Impact = () => {
@@ -13,7 +16,11 @@ const Impact = () => {
   const stats = [
     {
       icon: <FiZap className="w-8 h-8" />,
+<<<<<<< HEAD
       number: 50,
+=======
+      number: 500,
+>>>>>>> origin/main
       suffix: '+',
       label: 'Projects Completed',
       description: 'Solar installations across Tamil Nadu',
@@ -21,7 +28,11 @@ const Impact = () => {
     },
     {
       icon: <FiSun className="w-8 h-8" />,
+<<<<<<< HEAD
       number: 2,
+=======
+      number: 25,
+>>>>>>> origin/main
       suffix: 'MW+',
       label: 'Total Capacity Installed',
       description: 'Clean energy generation',
@@ -29,15 +40,26 @@ const Impact = () => {
     },
     {
       icon: <FiUsers className="w-8 h-8" />,
+<<<<<<< HEAD
       number: 100,
       suffix: '+',
       label: 'Happy Customers',
       description: 'Satisfied clients in Tamil Nadu',
+=======
+      number: 1000,
+      suffix: '+',
+      label: 'Happy Customers',
+      description: 'Satisfied clients nationwide',
+>>>>>>> origin/main
       color: 'from-green-500 to-green-600',
     },
     {
       icon: <FiTrendingUp className="w-8 h-8" />,
+<<<<<<< HEAD
       number: 1.5,
+=======
+      number: 15,
+>>>>>>> origin/main
       suffix: 'K+',
       label: 'Tons CO₂ Reduced',
       description: 'Environmental impact annually',
@@ -46,6 +68,10 @@ const Impact = () => {
   ];
 
   const achievements = [
+<<<<<<< HEAD
+=======
+    'ISO 9001:2015 Certified Company',
+>>>>>>> origin/main
     'Authorized Partner with Leading Brands',
     'Expert Team with 10+ Years Experience',
     '24/7 Customer Support & Maintenance',
@@ -141,6 +167,7 @@ const Impact = () => {
           className="text-center mt-12"
         >
           <p className="text-gray-600 mb-6 text-lg">
+<<<<<<< HEAD
             Experience the power of sustainable energy with our reliable solar solutions. Start your journey towards a greener future today.
           </p>
           <motion.div
@@ -149,12 +176,24 @@ const Impact = () => {
           >
             <Link
               href="/contact"
+=======
+            Join thousands of satisfied customers who have made the switch to solar
+          </p>
+          <motion.a
+            href="#contact"
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+>>>>>>> origin/main
             className="inline-flex items-center gap-2 bg-primary text-white px-8 py-4 rounded-full font-semibold hover:bg-primary-dark transition-colors shadow-lg hover:shadow-xl"
           >
             Start Your Solar Journey
             <FiZap className="w-5 h-5" />
+<<<<<<< HEAD
             </Link>
           </motion.div>
+=======
+          </motion.a>
+>>>>>>> origin/main
         </motion.div>
       </div>
     </section>
@@ -178,12 +217,16 @@ const StatCard = ({ stat, isInView, index }: { stat: any; isInView: boolean; ind
           setCount(stat.number);
           clearInterval(timer);
         } else {
+<<<<<<< HEAD
           // Handle decimal numbers properly
           if (stat.number % 1 !== 0) {
             setCount(parseFloat(current.toFixed(1)));
         } else {
           setCount(Math.floor(current));
           }
+=======
+          setCount(Math.floor(current));
+>>>>>>> origin/main
         }
       }, duration / steps);
 
@@ -201,7 +244,11 @@ const StatCard = ({ stat, isInView, index }: { stat: any; isInView: boolean; ind
       {/* Number with Counter Animation */}
       <div className="mb-2">
         <span className="text-4xl md:text-5xl font-bold text-gray-800">
+<<<<<<< HEAD
           {typeof count === 'number' && count % 1 !== 0 ? count.toFixed(1) : count.toLocaleString()}
+=======
+          {count.toLocaleString()}
+>>>>>>> origin/main
         </span>
         <span className="text-3xl md:text-4xl font-bold text-primary ml-1">
           {stat.suffix}
