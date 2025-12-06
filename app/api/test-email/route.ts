@@ -58,7 +58,7 @@ export async function GET() {
             <style>
               body { font-family: Arial, sans-serif; line-height: 1.6; color: #333; }
               .container { max-width: 600px; margin: 0 auto; padding: 20px; }
-              .header { background: linear-gradient(135deg, #FF6B00 0%, #E55D00 100%); color: white; padding: 20px; border-radius: 8px 8px 0 0; text-align: center; }
+              .header { background: linear-gradient(135deg, #5bb450 0%, #52a447 100%); color: white; padding: 20px; border-radius: 8px 8px 0 0; text-align: center; }
               .content { background: #f9f9f9; padding: 20px; border-radius: 0 0 8px 8px; }
               .success { background: #d4edda; border: 1px solid #c3e6cb; color: #155724; padding: 15px; border-radius: 4px; margin: 20px 0; }
             </style>

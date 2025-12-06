@@ -56,13 +56,13 @@ export async function POST(request: NextRequest) {
             <style>
               body { font-family: Arial, sans-serif; line-height: 1.6; color: #333; }
               .container { max-width: 600px; margin: 0 auto; padding: 20px; }
-              .header { background: linear-gradient(135deg, #FF6B00 0%, #E55D00 100%); color: white; padding: 20px; border-radius: 8px 8px 0 0; }
+              .header { background: linear-gradient(135deg, #5bb450 0%, #52a447 100%); color: white; padding: 20px; border-radius: 8px 8px 0 0; }
               .content { background: #f9f9f9; padding: 20px; border-radius: 0 0 8px 8px; }
               .field { margin-bottom: 15px; }
-              .label { font-weight: bold; color: #FF6B00; }
-              .value { margin-top: 5px; padding: 10px; background: white; border-radius: 4px; border-left: 3px solid #FF6B00; }
+              .label { font-weight: bold; color: #5bb450; }
+              .value { margin-top: 5px; padding: 10px; background: white; border-radius: 4px; border-left: 3px solid #5bb450; }
               .footer { margin-top: 20px; padding-top: 20px; border-top: 1px solid #ddd; font-size: 12px; color: #666; }
-              .button { display: inline-block; padding: 10px 20px; background: #FF6B00; color: white; text-decoration: none; border-radius: 4px; margin-top: 10px; }
+              .button { display: inline-block; padding: 10px 20px; background: #5bb450; color: white; text-decoration: none; border-radius: 4px; margin-top: 10px; }
             </style>
           </head>
           <body>

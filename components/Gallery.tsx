@@ -11,7 +11,7 @@ const Gallery = () => {
   const isInView = useInView(ref, { once: true, margin: "-100px" });
   const [selectedCategory, setSelectedCategory] = useState('All');
 
-  const categories = ['All', 'Ground Mount', 'Roof Solar', 'Industrial', 'Street Lights', 'Installations'];
+  const categories = ['All', 'Ground Mount', 'Roof Solar', 'Industrial', 'Installations'];
 
   // Gallery images from /public/images/gallery/
   const galleryImages = [
@@ -70,16 +70,28 @@ const Gallery = () => {
     'IMG-20251126-WA0065.jpg',
   ];
 
-  // Function to assign category based on image index (you can customize this)
-  const getCategory = (index: number): string => {
-    // Distribute images across categories
-    const categoryIndex = index % (categories.length - 1); // Exclude 'All'
-    return categories[categoryIndex + 1]; // +1 to skip 'All'
+  // Function to assign category based on image name/index
+  const getCategory = (imageName: string, index: number): string => {
+    // Ground Mount images - only the last few images that represent ground-mounted solar plants
+    const groundMountImages = [
+      'IMG-20251126-WA0062.jpg',
+      'IMG-20251126-WA0063.jpg',
+      'IMG-20251126-WA0065.jpg',
+    ];
+
+    if (groundMountImages.includes(imageName)) {
+      return 'Ground Mount';
+    }
+
+    // Distribute remaining images across other categories
+    const otherCategories = ['Roof Solar', 'Industrial', 'Installations'];
+    const categoryIndex = index % otherCategories.length;
+    return otherCategories[categoryIndex];
   };
 
   // Create gallery items from images
   const galleryItems = galleryImages.map((imageName, index) => {
-    const category = getCategory(index);
+    const category = getCategory(imageName, index);
     const imageNumber = imageName.replace('IMG-20251126-WA', '').replace('.jpg', '');
     return {
       image: `/images/gallery/${imageName}`,

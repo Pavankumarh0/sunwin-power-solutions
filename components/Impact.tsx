@@ -29,7 +29,7 @@ const Impact = () => {
     },
     {
       icon: <FiUsers className="w-8 h-8" />,
-      number: 100,
+      number: 50,
       suffix: '+',
       label: 'Happy Customers',
       description: 'Satisfied clients in Tamil Nadu',
@@ -49,8 +49,7 @@ const Impact = () => {
     'Authorized Partner with Leading Brands',
     'Expert Team with 10+ Years Experience',
     '24/7 Customer Support & Maintenance',
-    'Government Approved Solar Installer',
-    'Competitive Pricing & Flexible EMI Options',
+    'EMI Options from reputed Banks',
   ];
 
   return (

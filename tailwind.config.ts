@@ -10,14 +10,14 @@ const config: Config = {
     extend: {
       colors: {
         primary: {
-          DEFAULT: '#FF6B00',
-          dark: '#E55D00',
-          light: '#FF8533',
+          DEFAULT: '#5bb450',
+          dark: '#52a447',
+          light: '#72bf6a',
         },
         secondary: {
-          DEFAULT: '#1E3A8A',
-          dark: '#1E40AF',
-          light: '#3B82F6',
+          DEFAULT: '#52a447',
+          dark: '#4a943f',
+          light: '#5bb450',
         },
       },
       animation: {

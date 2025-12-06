@@ -22,42 +22,22 @@ const Hero = () => {
   }, []);
   return (
     <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20 sm:pt-24 md:pt-32">
-      {/* Animated Background Video/GIF */}
+      {/* Background Video */}
       <div className="absolute inset-0 z-0">
-        {/* Video Background - Preferred for better performance */}
-        {!useGif && (
-          <video
-            ref={videoRef}
-            autoPlay
-            loop
-            muted
-            playsInline
-            className="absolute inset-0 w-full h-full object-cover"
-            style={{ opacity: 0.8 }}
-            onError={() => setUseGif(true)}
-          >
-            {/* Solar plant background video */}
-            <source src="/videos/177600-857741650_small.mp4" type="video/mp4" />
-          </video>
-        )}
-        
-        {/* Fallback: GIF Background (if video doesn't load) */}
-        {useGif && (
-          <div className="absolute inset-0 w-full h-full">
-            <Image
-              src="/images/solar-plant-background.gif"
-              alt="Solar Plant Background"
-              fill
-              className="object-cover"
-              style={{ opacity: 0.8 }}
-              unoptimized
-              priority
-            />
-          </div>
-        )}
-        
+        <video
+          ref={videoRef}
+          autoPlay
+          loop
+          muted
+          playsInline
+          className="absolute inset-0 w-full h-full object-cover"
+        >
+          <source src="/videos/AdobeStock_1595633956_Video_HD_Preview.mov" type="video/quicktime" />
+          <source src="/videos/AdobeStock_1595633956_Video_HD_Preview.mov" type="video/mp4" />
+        </video>
+
         {/* Black dim overlay for text readability */}
-        <div className="absolute inset-0 bg-black/70"></div>
+        <div className="absolute inset-0 bg-black/50"></div>
       </div>
 
       {/* Floating Solar Panel Animation - Hidden on mobile */}

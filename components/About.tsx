@@ -21,6 +21,14 @@ const About = () => {
     'Long-term O&M services for Solar power plants'
   ];
 
+  const windCompetencies = [
+    'Installation, erection & commissioning support for wind turbines.',
+    'Electrical and civil balance of plant (BoP) works.',
+    'Grid connectivity, substation work, and transmission line integration',
+    'Preventive & corrective maintenance for wind assets',
+    'Long-term O&M services for wind power plants'
+  ];
+
   const keyHighlights = [
     'Capacity Range: From kW to MW scale',
     'Projects Turnkey solutions from design to commissioning',
@@ -79,16 +87,16 @@ const About = () => {
             transition={{ duration: 0.8, delay: 0.4 }}
           >
             <h3 className="text-2xl sm:text-3xl font-bold text-gray-800 mb-4 sm:mb-6">
-              Over Two Decades of Expertise in Solar Energy Sector
+              Over 20 years of expertise in the Renewable Energy Sector (Solar & Wind).
             </h3>
             <p className="text-gray-600 mb-4 sm:mb-6 leading-relaxed text-sm sm:text-base">
-              With more than 20 years of proven experience, we have deep technical knowledge, strong execution 
-              capabilities in the Solar Energy sector. Our experience in the renewable energy industry 
+              With more than 20 years of proven experience, we have deep technical knowledge, strong execution
+              capabilities in the Solar & Wind Energy sector. Our experience in the renewable energy industry
               enables us to deliver reliable, efficient, and future-ready solutions for projects of all scales.
             </p>
             <p className="text-gray-600 mb-6 sm:mb-8 leading-relaxed text-sm sm:text-base">
-              Our mission is to empower you to "Power it Yourself" by providing the most advanced and reliable 
-              solar energy systems tailored to your unique needs. With a focus on quality, efficiency, 
+              Our mission is to empower you to "Power it Yourself" by providing the most advanced and reliable
+              solar energy systems tailored to your unique needs. With a focus on quality, efficiency,
               and environmental responsibility, we deliver sustainable energy solutions that make a real difference.
             </p>
 
@@ -116,8 +124,8 @@ const About = () => {
           <h3 className="text-2xl sm:text-3xl font-bold text-gray-800 mb-6 sm:mb-8 text-center px-2">
             Our Core Competencies Includes:
           </h3>
-          
-          <div className="max-w-3xl mx-auto">
+
+          <div className="grid md:grid-cols-2 gap-6 sm:gap-8 max-w-6xl mx-auto">
             {/* Solar Energy Solutions */}
             <motion.div
               initial={{ opacity: 0, y: 50 }}
@@ -135,6 +143,32 @@ const About = () => {
                     initial={{ opacity: 0, x: -20 }}
                     animate={isInView ? { opacity: 1, x: 0 } : {}}
                     transition={{ delay: 0.9 + index * 0.1 }}
+                    className="flex items-start gap-2 sm:gap-3"
+                  >
+                    <FiCheckCircle className="text-primary text-lg sm:text-xl flex-shrink-0 mt-0.5" />
+                    <span className="text-gray-700 text-sm sm:text-base">{item}</span>
+                  </motion.li>
+                ))}
+              </ul>
+            </motion.div>
+
+            {/* Wind Energy Solutions */}
+            <motion.div
+              initial={{ opacity: 0, y: 50 }}
+              animate={isInView ? { opacity: 1, y: 0 } : {}}
+              transition={{ delay: 1.0, duration: 0.8 }}
+              className="bg-white p-4 sm:p-6 rounded-xl shadow-lg"
+            >
+              <h4 className="text-xl sm:text-2xl font-bold text-gray-800 mb-3 sm:mb-4 underline">
+                Wind Energy Solutions
+              </h4>
+              <ul className="space-y-2 sm:space-y-3">
+                {windCompetencies.map((item, index) => (
+                  <motion.li
+                    key={index}
+                    initial={{ opacity: 0, x: -20 }}
+                    animate={isInView ? { opacity: 1, x: 0 } : {}}
+                    transition={{ delay: 1.1 + index * 0.1 }}
                     className="flex items-start gap-2 sm:gap-3"
                   >
                     <FiCheckCircle className="text-primary text-lg sm:text-xl flex-shrink-0 mt-0.5" />

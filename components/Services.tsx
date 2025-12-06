@@ -40,7 +40,7 @@ const Services = () => {
       icon: <FiGrid className="w-12 h-12" />,
       title: 'EPC For Solar Power Plant Developers',
       description: 'End-to-end Engineering, Procurement, and Construction services for solar power plant developers.',
-      image: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?q=80&w=400',
+      image: '/images/logo/Top-Solar-EPC-Contractors-in-India.jpg',
       details: [
         {
           category: 'EPC Services',
@@ -56,7 +56,7 @@ const Services = () => {
       title: 'Operation and Maintenance of Solar Power Plants',
       subtitle: 'From KW to MW scale',
       description: 'Comprehensive O&M services to maximize energy generation and extend equipment lifespan.',
-      image: 'https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?q=80&w=400',
+      image: '/images/logo/shutterstock_1082412827.jpg',
       details: [
         {
           category: 'O&M Activities',
