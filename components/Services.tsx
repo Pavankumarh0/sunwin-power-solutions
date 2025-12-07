@@ -95,7 +95,7 @@ const Services = () => {
           </p>
         </motion.div>
 
-        <div className="space-y-12">
+        <div className="space-y-12 max-w-6xl mx-auto">
           {mainServices.map((service, index) => (
             <motion.div
               key={index}
@@ -104,24 +104,23 @@ const Services = () => {
               transition={{ delay: index * 0.2, duration: 0.8 }}
               className="bg-white rounded-2xl overflow-hidden shadow-xl border border-gray-100"
             >
-              <div className="grid md:grid-cols-2 gap-0">
-                {/* Image Section */}
-                <div className="relative h-64 md:h-full min-h-[300px]">
+              <div className="flex flex-col">
+                {/* Image Section - Centered */}
+                <div className="relative w-full max-w-2xl mx-auto h-64 md:h-96 min-h-[300px] flex items-center justify-center rounded-2xl overflow-hidden">
                 <Image
                   src={service.image}
                   alt={service.title}
                   fill
-                  className="object-cover"
+                  className="object-cover object-center"
                 />
                 <div className="absolute inset-0 bg-gradient-to-r from-primary/20 to-transparent"></div>
-                <div className="absolute bottom-6 left-6 text-white">
+                <div className="absolute bottom-6 left-1/2 transform -translate-x-1/2 text-white">
                   {service.icon}
                 </div>
                 </div>
-              </div>
 
               {/* Content Section */}
-              <div className="p-8">
+              <div className="w-full p-8 text-center">
                 <h3 className="text-2xl md:text-3xl font-bold text-gray-800 mb-2">
                   {service.title}
                 </h3>
@@ -138,7 +137,7 @@ const Services = () => {
                     <h4 className="text-lg font-bold text-gray-800 mb-3 underline">
                       {detail.category}
                     </h4>
-                    <ul className="space-y-2">
+                    <ul className="space-y-2 text-left max-w-2xl mx-auto">
                       {detail.items.map((item, itemIndex) => (
                         <li key={itemIndex} className="flex items-start gap-2 text-gray-700">
                           <FiCheckCircle className="text-primary flex-shrink-0 mt-1" />
@@ -148,6 +147,7 @@ const Services = () => {
                     </ul>
                   </div>
                 ))}
+              </div>
               </div>
             </motion.div>
           ))}
