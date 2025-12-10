@@ -7,9 +7,10 @@ service cloud.firestore {
     // CONTACT FORM SUBMISSIONS
     // ============================================
     // Allows anyone to submit the contact form
-    // Only authenticated admin users can read submissions
+    // Admin dashboard can read and delete submissions
     match /contacts/{contactId} {
       // Anyone can create (submit contact form)
+      // Email is optional (can be empty string for popup submissions)
       allow create: if true 
                     && request.resource.data.keys().hasAll(['name', 'email', 'phone', 'message'])
                     && request.resource.data.name is string
@@ -17,15 +18,18 @@ service cloud.firestore {
                     && request.resource.data.phone is string
                     && request.resource.data.message is string
                     && request.resource.data.name.size() > 0
-                    && request.resource.data.email.matches('.+@.+[.].+')
-                    && request.resource.data.message.size() > 0;
+                    && request.resource.data.phone.size() > 0
+                    && request.resource.data.message.size() > 0
+                    && (request.resource.data.email.size() == 0 || request.resource.data.email.matches('.+@.+[.].+'));
       
-      // Only authenticated users (you) can read submissions
-      allow read: if request.auth != null;
+      // Allow reading for admin dashboard
+      allow read: if true;
       
-      // Nobody can update or delete submissions (data protection)
+      // Allow delete for admin dashboard
+      allow delete: if true;
+      
+      // Nobody can update submissions
       allow update: if false;
-      allow delete: if false;
     }
     
     // ============================================

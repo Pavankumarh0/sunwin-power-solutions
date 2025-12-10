@@ -12,21 +12,21 @@ const About = () => {
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
   const solarCompetencies = [
-    'Installation & commissioning of rooftop solar systems (Residential, Commercial & Industrial)',
-    'Ground-mounted solar plant installation for kW-MW scale projects',
-    'EPC services for solar developers',
-    'System design, engineering, and project management',
-    'Performance optimization, SCADA integration, and testing',
-    'Electrical, structural, and civil works associated with solar installations',
-    'Long-term O&M services for Solar power plants'
+    'Installation & commissioning of rooftop solar systems (Residential, Commercial & Industrial).',
+    'Ground-mounted solar plant installation for kW-MW scale projects.',
+    'EPC services for solar developers.',
+    'System design, engineering, and project management.',
+    'Performance optimization, SCADA integration, and testing.',
+    'Electrical, structural, and civil works associated with solar installations.',
+    'Long-term O&M services for Solar power plants.'
   ];
 
   const windCompetencies = [
     'Installation, erection & commissioning support for wind turbines.',
     'Electrical and civil balance of plant (BoP) works.',
-    'Grid connectivity, substation work, and transmission line integration',
-    'Preventive & corrective maintenance for wind assets',
-    'Long-term O&M services for wind power plants'
+    'Grid connectivity, substation work, and transmission line integration.',
+    'Preventive & corrective maintenance for wind assets.',
+    'Long-term O&M services for wind power plants.'
   ];
 
   const keyHighlights = [
@@ -47,7 +47,7 @@ const About = () => {
           className="text-center mb-10 sm:mb-12 md:mb-16"
         >
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-800 mb-3 sm:mb-4 px-2">
-            About <span className="text-primary">Sunwin Power Solutions</span>
+            About <span className="text-secondary">Sunwin Power Solutions</span>
           </h2>
           <p className="text-gray-600 max-w-2xl mx-auto text-sm sm:text-base px-4">
             Leading service provider of solar renewable energy solutions. Expertise in custom solar power systems for residential, commercial and industries sectors. Delivering high quality, reliability and sustainable power solutions.
@@ -86,7 +86,7 @@ const About = () => {
             animate={isInView ? { opacity: 1, x: 0 } : {}}
             transition={{ duration: 0.8, delay: 0.4 }}
           >
-            <h3 className="text-2xl sm:text-3xl font-bold text-gray-800 mb-4 sm:mb-6">
+            <h3 className="text-2xl sm:text-3xl font-bold text-gray-500 mb-4 sm:mb-6">
               Over 20 years of expertise in the Renewable Energy Sector (Solar & Wind).
             </h3>
             <p className="text-gray-600 mb-4 sm:mb-6 leading-relaxed text-sm sm:text-base">

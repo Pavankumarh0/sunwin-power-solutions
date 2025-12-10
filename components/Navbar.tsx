@@ -3,8 +3,8 @@
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
-import { FiMenu, FiX, FiPhone, FiMail } from 'react-icons/fi';
-import { FaFacebook, FaInstagram } from 'react-icons/fa';
+import { FiMenu, FiX, FiMail, FiArrowRight } from 'react-icons/fi';
+import { FaFacebook, FaInstagram, FaYoutube, FaTwitter } from 'react-icons/fa';
 import Image from 'next/image';
 
 const Navbar = () => {
@@ -21,55 +21,61 @@ const Navbar = () => {
 
   const navItems = [
     { name: 'Home', href: '/' },
-    { name: 'About', href: '/about' },
+    { name: 'About Us', href: '/about' },
     { name: 'Services', href: '/services' },
     { name: 'Impact', href: '/impact' },
     { name: 'Gallery', href: '/gallery' },
-    { name: 'Contact', href: '/contact' },
+    { name: 'Contact Us', href: '/contact' },
   ];
 
   return (
     <nav className={`fixed w-full z-50 bg-white overflow-hidden transition-shadow duration-300 ${
       scrolled ? 'shadow-2xl' : 'shadow-lg'
     }`}>
-      {/* Top Bar */}
-      <div className="bg-primary text-white py-1.5 sm:py-2 overflow-hidden shadow-sm">
+      {/* Top Bar - Dark Blue */}
+      <div className="bg-secondary text-white py-2 sm:py-2.5 overflow-hidden">
         <div className="container mx-auto px-3 sm:px-4 flex justify-between items-center text-xs sm:text-sm">
-          <div className="flex items-center gap-1.5 sm:gap-2 md:gap-4 flex-shrink min-w-0">
-            <a href="tel:+919500164901" className="flex items-center gap-1 sm:gap-2 hover:text-gray-200 whitespace-nowrap">
-              <FiPhone className="flex-shrink-0" size={12} /> 
-              <span className="hidden sm:inline text-xs sm:text-sm">+91 9500164901</span>
-              <span className="sm:hidden text-xs">Call</span>
-            </a>
-            <a href="mailto:sunwinps@gmail.com" className="hidden md:flex items-center gap-2 hover:text-gray-200 text-xs sm:text-sm">
-              <FiMail size={12} /> <span className="truncate">sunwinps@gmail.com</span>
+          <div className="flex items-center gap-2">
+            <a href="mailto:sunwinps@gmail.com" className="flex items-center gap-2 hover:text-primary transition-colors">
+              <FiMail size={14} /> 
+              <span className="text-xs sm:text-sm">sunwinps@gmail.com</span>
             </a>
           </div>
-          <div className="flex items-center gap-2 sm:gap-3 flex-shrink-0">
+          <div className="flex items-center gap-3 sm:gap-4">
+            <span className="hidden sm:inline text-xs sm:text-sm text-gray-300">Follow Us:</span>
             <a 
               href="https://www.facebook.com/share/1aYE6fbSHh/" 
               target="_blank"
               rel="noopener noreferrer"
-              className="hover:text-gray-200 transition-colors"
+              className="hover:text-primary transition-colors"
               aria-label="Facebook"
             >
-              <FaFacebook size={14} className="sm:w-4 sm:h-4" />
+              <FaFacebook size={16} />
+            </a>
+            <a 
+              href="https://twitter.com" 
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:text-primary transition-colors"
+              aria-label="Twitter"
+            >
+              <FaTwitter size={16} />
             </a>
             <a 
               href="https://www.instagram.com/sunwinps?igsh=MWtuaHhuNDhmdHl3dg==" 
               target="_blank"
               rel="noopener noreferrer"
-              className="hover:text-gray-200 transition-colors"
+              className="hover:text-primary transition-colors"
               aria-label="Instagram"
             >
-              <FaInstagram size={14} className="sm:w-4 sm:h-4" />
+              <FaInstagram size={16} />
             </a>
           </div>
         </div>
       </div>
 
-      {/* Main Navigation */}
-      <div className="container mx-auto px-3 sm:px-4 overflow-hidden">
+      {/* Main Navigation - White background */}
+      <div className="container mx-auto px-3 sm:px-4 overflow-hidden bg-white/95 backdrop-blur-sm">
         <div className="flex justify-between items-center h-14 sm:h-16 md:h-20">
           {/* Logo */}
           <Link href="/" className="flex items-center gap-2 flex-shrink-0">
@@ -105,9 +111,10 @@ const Navbar = () => {
             >
               <Link
                 href="/contact"
-                className="bg-primary text-white px-4 lg:px-6 py-1.5 lg:py-2 rounded-full hover:bg-primary-dark transition-colors inline-block text-sm lg:text-base"
+                className="bg-secondary text-white px-5 lg:px-6 py-2 lg:py-2.5 rounded-full hover:bg-secondary-light transition-colors inline-flex items-center gap-2 text-sm lg:text-base font-semibold tracking-wide"
               >
-                Get Quote
+                GET QUOTE
+                <FiArrowRight size={16} />
               </Link>
             </motion.div>
           </div>
@@ -123,7 +130,7 @@ const Navbar = () => {
         </div>
       </div>
 
-      {/* Mobile Menu - Enhanced Shadow Container */}
+      {/* Mobile Menu */}
       {isOpen && (
         <motion.div
           initial={{ opacity: 0, y: -20, scale: 0.95 }}
@@ -161,9 +168,10 @@ const Navbar = () => {
               <Link
                 href="/contact"
                 onClick={() => setIsOpen(false)}
-                className="block bg-primary text-white px-6 py-3 rounded-full text-center hover:bg-primary-dark transition-all shadow-md hover:shadow-lg"
+                className="bg-secondary text-white px-6 py-3 rounded-full text-center hover:bg-secondary-light transition-all shadow-md hover:shadow-lg flex items-center justify-center gap-2 font-semibold"
               >
-                Get Quote
+                GET QUOTE
+                <FiArrowRight size={16} />
               </Link>
             </motion.div>
           </div>

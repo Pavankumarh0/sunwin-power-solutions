@@ -20,9 +20,10 @@ const Hero = () => {
       return () => video.removeEventListener('error', handleError);
     }
   }, []);
+
   return (
-    <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20 sm:pt-24 md:pt-32">
-      {/* Background Video */}
+    <section id="home" className="relative min-h-screen flex items-center overflow-hidden pt-24 sm:pt-28 md:pt-32 pb-16 sm:pb-20">
+      {/* Background Video/Image */}
       <div className="absolute inset-0 z-0">
         <video
           ref={videoRef}
@@ -32,92 +33,90 @@ const Hero = () => {
           playsInline
           className="absolute inset-0 w-full h-full object-cover"
         >
-          <source src="/videos/AdobeStock_1595633956_Video_HD_Preview.mov" type="video/quicktime" />
-          <source src="/videos/AdobeStock_1595633956_Video_HD_Preview.mov" type="video/mp4" />
+          <source src="/videos/Home page video.mp4" type="video/mp4" />
         </video>
 
-        {/* Black dim overlay for text readability */}
-        <div className="absolute inset-0 bg-black/50"></div>
+        {/* Dark overlay for better text readability - stronger on mobile */}
+        <div className="absolute inset-0 bg-gradient-to-r from-black/90 via-black/70 to-black/40 md:from-black/80 md:via-black/60 md:to-black/20"></div>
+        
+        {/* Left side half shadow overlay */}
+        <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/50 to-transparent w-full md:w-3/4"></div>
       </div>
 
-      {/* Floating Solar Panel Animation - Hidden on mobile */}
-      <motion.div
-        className="absolute top-20 right-10 w-24 h-24 sm:w-32 sm:h-32 opacity-20 hidden sm:block"
-        animate={{
-          y: [0, -20, 0],
-          rotate: [0, 5, 0],
-        }}
-        transition={{
-          duration: 4,
-          repeat: Infinity,
-          ease: "easeInOut"
-        }}
-      >
-        <Image
-          src="https://images.unsplash.com/photo-1559302504-64aae6ca6b6d?q=80&w=200"
-          alt="Solar Panel"
-          fill
-          className="object-contain"
-        />
-      </motion.div>
+      {/* Diagonal Bottom Edge */}
+      <div className="absolute bottom-0 left-0 right-0 z-10">
+        <svg 
+          viewBox="0 0 1440 120" 
+          fill="none" 
+          xmlns="http://www.w3.org/2000/svg"
+          className="w-full h-auto"
+          preserveAspectRatio="none"
+        >
+          <path 
+            d="M0 120L1440 120L1440 60C1440 60 1200 0 720 60C240 120 0 60 0 60L0 120Z" 
+            fill="white"
+          />
+        </svg>
+      </div>
 
       {/* Content */}
-      <div className="container mx-auto px-4 sm:px-6 z-10 text-center max-w-full">
+      <div className="container mx-auto px-3 sm:px-4 z-10 max-w-full">
         <motion.div
           initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
-          className="w-full"
+          className="w-full max-w-4xl"
         >
+          {/* Subtitle Tag */}
+          <motion.div
+            initial={{ opacity: 0, x: -30 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ delay: 0.2, duration: 0.6 }}
+            className="mb-4 sm:mb-6"
+          >
+            <span className="inline-block bg-primary/90 text-white px-3 sm:px-4 py-1.5 sm:py-2 rounded text-[10px] sm:text-xs md:text-sm font-semibold tracking-[0.15em] sm:tracking-[0.2em] uppercase">
+              Powering a Green<span className="text-secondary-light">er</span> Tomorrow
+            </span>
+          </motion.div>
+
+          {/* Main Heading */}
           <motion.h1
-            className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-white mb-4 sm:mb-6 px-2 leading-tight"
+            className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-white mb-4 sm:mb-6 leading-tight"
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.2, duration: 0.8 }}
+            transition={{ delay: 0.3, duration: 0.8 }}
           >
-            Power Your Future
-            <br />
-            <span className="text-primary">With Solar Energy</span>
+            <span className="block">Customized Solar Solutions,</span>
+            <span className="block">Engineered for Excellence</span>
           </motion.h1>
 
+          {/* Description */}
           <motion.p
-            className="text-base sm:text-lg md:text-xl lg:text-2xl text-gray-200 mb-6 sm:mb-8 max-w-3xl mx-auto px-4 leading-relaxed"
+            className="text-sm sm:text-base md:text-lg lg:text-xl text-gray-200 mb-6 sm:mb-8 md:mb-10 max-w-2xl leading-relaxed pr-4"
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.4, duration: 0.8 }}
+            transition={{ delay: 0.5, duration: 0.8 }}
           >
-            Leading service provider of solar renewable energy solutions. Expertise in custom solar power systems for residential, commercial and industries sectors. Delivering high quality, reliability and sustainable power solutions.
+            8+ years of expertise in custom solar PV systems for homes, businesses, and industries—delivering quality, precision, and sustainable energy.
           </motion.p>
 
+          {/* CTA Button */}
           <motion.div
-            className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center items-center px-4"
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.6, duration: 0.8 }}
+            transition={{ delay: 0.7, duration: 0.8 }}
           >
             <motion.div
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className="w-full sm:w-auto"
+              className="inline-block"
             >
               <Link
                 href="/contact"
-                className="bg-primary text-white px-6 sm:px-8 py-3 sm:py-4 rounded-full font-semibold flex items-center justify-center gap-2 hover:bg-primary-dark transition-colors shadow-lg text-sm sm:text-base w-full sm:w-auto"
+                className="bg-primary text-white px-6 sm:px-8 md:px-10 py-3 sm:py-4 rounded-full font-bold flex items-center gap-2 sm:gap-3 hover:bg-primary-dark transition-all shadow-lg text-xs sm:text-sm md:text-base tracking-wide uppercase"
               >
-                Get Started
-                <FiArrowRight className="hidden sm:inline" />
-              </Link>
-            </motion.div>
-            <motion.div
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-              className="w-full sm:w-auto"
-            >
-              <Link
-                href="/services"
-                className="bg-white text-secondary px-6 sm:px-8 py-3 sm:py-4 rounded-full font-semibold hover:bg-gray-100 transition-colors shadow-lg text-sm sm:text-base w-full sm:w-auto text-center block"
-              >
-                Our Services
+                Contact Us
+                <FiArrowRight size={18} className="sm:w-5 sm:h-5" />
               </Link>
             </motion.div>
           </motion.div>
@@ -126,13 +125,13 @@ const Hero = () => {
 
       {/* Scroll Indicator */}
       <motion.div
-        className="absolute bottom-6 sm:bottom-8 left-1/2 transform -translate-x-1/2 hidden sm:block"
+        className="absolute bottom-24 sm:bottom-28 left-1/2 transform -translate-x-1/2 hidden sm:block z-20"
         animate={{ y: [0, 10, 0] }}
         transition={{ duration: 1.5, repeat: Infinity }}
       >
-        <div className="w-6 h-10 border-2 border-white rounded-full flex justify-center">
+        <div className="w-6 h-10 border-2 border-white/50 rounded-full flex justify-center">
           <motion.div
-            className="w-1.5 h-3 bg-white rounded-full mt-2"
+            className="w-1.5 h-3 bg-white/50 rounded-full mt-2"
             animate={{ y: [0, 12, 0] }}
             transition={{ duration: 1.5, repeat: Infinity }}
           />

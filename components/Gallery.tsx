@@ -11,94 +11,51 @@ const Gallery = () => {
   const isInView = useInView(ref, { once: true, margin: "-100px" });
   const [selectedCategory, setSelectedCategory] = useState('All');
 
-  const categories = ['All', 'Ground Mount', 'Roof Solar', 'Industrial', 'Installations'];
+  const categories = ['All', 'Ground Mount', 'Roof Solar'];
 
-  // Gallery images from /public/images/gallery/
-  const galleryImages = [
-    'IMG-20251126-WA0011.jpg',
-    'IMG-20251126-WA0012.jpg',
-    'IMG-20251126-WA0013.jpg',
-    'IMG-20251126-WA0015.jpg',
-    'IMG-20251126-WA0016.jpg',
-    'IMG-20251126-WA0017.jpg',
-    'IMG-20251126-WA0018.jpg',
-    'IMG-20251126-WA0019.jpg',
-    'IMG-20251126-WA0020.jpg',
-    'IMG-20251126-WA0021.jpg',
-    'IMG-20251126-WA0022.jpg',
-    'IMG-20251126-WA0023.jpg',
-    'IMG-20251126-WA0024.jpg',
-    'IMG-20251126-WA0025.jpg',
-    'IMG-20251126-WA0026.jpg',
-    'IMG-20251126-WA0027.jpg',
-    'IMG-20251126-WA0028.jpg',
-    'IMG-20251126-WA0029.jpg',
-    'IMG-20251126-WA0030.jpg',
-    'IMG-20251126-WA0031.jpg',
-    'IMG-20251126-WA0032.jpg',
-    'IMG-20251126-WA0033.jpg',
-    'IMG-20251126-WA0034.jpg',
-    'IMG-20251126-WA0035.jpg',
-    'IMG-20251126-WA0036.jpg',
-    'IMG-20251126-WA0037.jpg',
-    'IMG-20251126-WA0038.jpg',
-    'IMG-20251126-WA0039.jpg',
-    'IMG-20251126-WA0040.jpg',
-    'IMG-20251126-WA0041.jpg',
-    'IMG-20251126-WA0042.jpg',
-    'IMG-20251126-WA0043.jpg',
-    'IMG-20251126-WA0044.jpg',
-    'IMG-20251126-WA0045.jpg',
-    'IMG-20251126-WA0046.jpg',
-    'IMG-20251126-WA0047.jpg',
-    'IMG-20251126-WA0048.jpg',
-    'IMG-20251126-WA0049.jpg',
-    'IMG-20251126-WA0050.jpg',
-    'IMG-20251126-WA0051.jpg',
-    'IMG-20251126-WA0052.jpg',
-    'IMG-20251126-WA0053.jpg',
-    'IMG-20251126-WA0054.jpg',
-    'IMG-20251126-WA0055.jpg',
-    'IMG-20251126-WA0056.jpg',
-    'IMG-20251126-WA0057.jpg',
-    'IMG-20251126-WA0058.jpg',
-    'IMG-20251126-WA0059.jpg',
-    'IMG-20251126-WA0060.jpg',
-    'IMG-20251126-WA0061.jpg',
-    'IMG-20251126-WA0062.jpg',
-    'IMG-20251126-WA0063.jpg',
-    'IMG-20251126-WA0065.jpg',
+  // Roof-Top Pics from /public/images/Roof-Top Pics/
+  const roofTopImages = [
+    'RT-1.jpg',
+    'RT-2.jpeg',
+    'RT-3.jpeg',
+    'RT-4.jpg',
+    'RT-5.jpeg',
+    'RT-6.jpg',
+    'RT-7.jpg',
+    'RT-8.jpeg',
+    'RT-9.jpeg',
+    'RT-10.jpeg',
+    'RT-11.jpeg',
+    'RT-12.jpeg',
+    'RT-13.jpeg',
+    'RT-14.jpeg',
+    'RT-15.jpeg',
+    'RT-16.jpg',
   ];
 
-  // Function to assign category based on image name/index
-  const getCategory = (imageName: string, index: number): string => {
-    // Ground Mount images - only the last few images that represent ground-mounted solar plants
-    const groundMountImages = [
-      'IMG-20251126-WA0062.jpg',
-      'IMG-20251126-WA0063.jpg',
-      'IMG-20251126-WA0065.jpg',
-    ];
+  // Ground Mount Pics from /public/images/Ground Mount pic/
+  const groundMountImages = [
+    'GM-1.jpg',
+    'GM-2.jpeg',
+    'GM-3.jpeg',
+    'GM-4.jpeg',
+  ];
 
-    if (groundMountImages.includes(imageName)) {
-      return 'Ground Mount';
-    }
-
-    // Distribute remaining images across other categories
-    const otherCategories = ['Roof Solar', 'Industrial', 'Installations'];
-    const categoryIndex = index % otherCategories.length;
-    return otherCategories[categoryIndex];
-  };
-
-  // Create gallery items from images
-  const galleryItems = galleryImages.map((imageName, index) => {
-    const category = getCategory(imageName, index);
-    const imageNumber = imageName.replace('IMG-20251126-WA', '').replace('.jpg', '');
-    return {
-      image: `/images/gallery/${imageName}`,
-      title: `Solar Installation ${imageNumber}`,
-      category: category,
-    };
-  });
+  // Create gallery items from all images
+  const galleryItems = [
+    // Roof-Top Pics (Roof Solar category)
+    ...roofTopImages.map((imageName, index) => ({
+      image: `/images/Roof-Top Pics/${imageName}`,
+      title: `Rooftop Solar ${index + 1}`,
+      category: 'Roof Solar',
+    })),
+    // Ground Mount Pics (Ground Mount category)
+    ...groundMountImages.map((imageName, index) => ({
+      image: `/images/Ground Mount pic/${imageName}`,
+      title: `Ground Mount Solar ${index + 1}`,
+      category: 'Ground Mount',
+    })),
+  ];
   const filteredItems = selectedCategory === 'All'
     ? galleryItems
     : galleryItems.filter(item => item.category === selectedCategory);
