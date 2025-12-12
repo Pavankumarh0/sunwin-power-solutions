@@ -10,23 +10,38 @@ const GalleryPreview = () => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
-  // Show only first 6 images as preview
-  const previewImages = [
-    'IMG-20251126-WA0011.jpg',
-    'IMG-20251126-WA0012.jpg',
-    'IMG-20251126-WA0013.jpg',
-    'IMG-20251126-WA0015.jpg',
-    'IMG-20251126-WA0016.jpg',
-    'IMG-20251126-WA0017.jpg',
+  // Ground Mount Pics from /public/images/Ground Mount pic/
+  const groundMountImages = [
+    'GM-1.jpg',
+    'GM-2.jpeg',
+    'GM-3.jpeg',
+    'GM-4.jpeg',
   ];
 
-  const galleryItems = previewImages.map((imageName, index) => {
-    const imageNumber = imageName.replace('IMG-20251126-WA', '').replace('.jpg', '');
-    return {
-      image: `/images/gallery/${imageName}`,
-      title: `Solar Installation ${imageNumber}`,
-    };
-  });
+  // Roof-Top Pics from /public/images/Roof-Top Pics/
+  const roofTopImages = [
+    'RT-1.jpg',
+    'RT-2.jpeg',
+  ];
+
+  // Create gallery items - Ground Mount first, then Roof Top
+  const allGalleryItems = [
+    // Ground Mount Pics (Ground Mount category) - First
+    ...groundMountImages.map((imageName, index) => ({
+      image: `/images/Ground Mount pic/${imageName}`,
+      title: `Ground Mount Solar ${index + 1}`,
+      category: 'Ground Mount',
+    })),
+    // Roof-Top Pics (Roof Solar category) - After Ground Mount
+    ...roofTopImages.map((imageName, index) => ({
+      image: `/images/Roof-Top Pics/${imageName}`,
+      title: `Rooftop Solar ${index + 1}`,
+      category: 'Roof Solar',
+    })),
+  ];
+
+  // Show only first 6 images as preview
+  const galleryItems = allGalleryItems.slice(0, 6);
 
   return (
     <section id="gallery-preview" className="py-20 bg-gray-50" ref={ref}>
@@ -37,10 +52,10 @@ const GalleryPreview = () => {
           transition={{ duration: 0.8 }}
           className="text-center mb-12"
         >
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-800 mb-4">
+          <h2 className="text-4xl md:text-5xl font-bold text-secondary mb-4">
             Our <span className="text-primary">Gallery</span>
           </h2>
-          <p className="text-gray-600 max-w-2xl mx-auto">
+          <p className="text-secondary max-w-2xl mx-auto">
             Explore our completed solar installations and see the quality of our work
           </p>
         </motion.div>
@@ -57,26 +72,15 @@ const GalleryPreview = () => {
               initial={{ opacity: 0, scale: 0.9 }}
               animate={isInView ? { opacity: 1, scale: 1 } : {}}
               transition={{ delay: index * 0.1, duration: 0.5 }}
-              whileHover={{ y: -10 }}
-              className="relative group overflow-hidden rounded-xl shadow-lg cursor-pointer h-80"
+              className="relative overflow-hidden rounded-xl shadow-lg h-80"
             >
               <Image
                 src={item.image}
                 alt={item.title}
                 fill
-                className="object-cover transition-transform duration-500 group-hover:scale-110"
+                className="object-cover"
                 sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
               />
-              
-              {/* Overlay */}
-              <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                <div className="absolute bottom-0 left-0 right-0 p-6 text-white transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
-                  <h3 className="text-xl font-bold mb-2">{item.title}</h3>
-                </div>
-              </div>
-
-              {/* Hover Border Effect */}
-              <div className="absolute inset-0 border-4 border-primary opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-xl"></div>
             </motion.div>
           ))}
         </motion.div>

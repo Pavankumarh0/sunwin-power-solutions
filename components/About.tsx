@@ -46,10 +46,10 @@ const About = () => {
           transition={{ duration: 0.8 }}
           className="text-center mb-10 sm:mb-12 md:mb-16"
         >
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-800 mb-3 sm:mb-4 px-2">
-            About <span className="text-secondary">Sunwin Power Solutions</span>
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-secondary mb-3 sm:mb-4 px-2">
+            About <span className="text-primary">Sunwin Power Solutions</span>
           </h2>
-          <p className="text-gray-600 max-w-2xl mx-auto text-sm sm:text-base px-4">
+          <p className="text-secondary max-w-2xl mx-auto text-sm sm:text-base px-4">
             Leading service provider of solar renewable energy solutions. Expertise in custom solar power systems for residential, commercial and industries sectors. Delivering high quality, reliability and sustainable power solutions.
           </p>
         </motion.div>
@@ -86,15 +86,15 @@ const About = () => {
             animate={isInView ? { opacity: 1, x: 0 } : {}}
             transition={{ duration: 0.8, delay: 0.4 }}
           >
-            <h3 className="text-2xl sm:text-3xl font-bold text-gray-500 mb-4 sm:mb-6">
-              Over 20 years of expertise in the Renewable Energy Sector (Solar & Wind).
+            <h3 className="text-2xl sm:text-3xl font-bold text-secondary mb-4 sm:mb-6">
+              Over 20 years of Expertise in the Renewable Energy Sector (Solar & Wind).
             </h3>
-            <p className="text-gray-600 mb-4 sm:mb-6 leading-relaxed text-sm sm:text-base">
+            <p className="text-secondary mb-4 sm:mb-6 leading-relaxed text-sm sm:text-base">
               With more than 20 years of proven experience, we have deep technical knowledge, strong execution
               capabilities in the Solar & Wind Energy sector. Our experience in the renewable energy industry
               enables us to deliver reliable, efficient, and future-ready solutions for projects of all scales.
             </p>
-            <p className="text-gray-600 mb-6 sm:mb-8 leading-relaxed text-sm sm:text-base">
+            <p className="text-secondary mb-6 sm:mb-8 leading-relaxed text-sm sm:text-base">
               Our mission is to empower you to "Power it Yourself" by providing the most advanced and reliable
               solar energy systems tailored to your unique needs. With a focus on quality, efficiency,
               and environmental responsibility, we deliver sustainable energy solutions that make a real difference.
@@ -121,7 +121,7 @@ const About = () => {
           transition={{ delay: 0.6, duration: 0.8 }}
           className="mb-10 sm:mb-12 md:mb-16"
         >
-          <h3 className="text-2xl sm:text-3xl font-bold text-gray-800 mb-6 sm:mb-8 text-center px-2">
+          <h3 className="text-2xl sm:text-3xl font-bold text-secondary mb-6 sm:mb-8 text-center px-2">
             Our Core Competencies Includes:
           </h3>
 
@@ -133,7 +133,7 @@ const About = () => {
               transition={{ delay: 0.8, duration: 0.8 }}
               className="bg-white p-4 sm:p-6 rounded-xl shadow-lg"
             >
-              <h4 className="text-xl sm:text-2xl font-bold text-gray-800 mb-3 sm:mb-4 underline">
+              <h4 className="text-xl sm:text-2xl font-bold text-secondary mb-3 sm:mb-4 underline">
                 Solar Energy Solutions
               </h4>
               <ul className="space-y-2 sm:space-y-3">
@@ -146,7 +146,7 @@ const About = () => {
                     className="flex items-start gap-2 sm:gap-3"
                   >
                     <FiCheckCircle className="text-primary text-lg sm:text-xl flex-shrink-0 mt-0.5" />
-                    <span className="text-gray-700 text-sm sm:text-base">{item}</span>
+                    <span className="text-secondary text-sm sm:text-base">{item}</span>
                   </motion.li>
                 ))}
               </ul>
@@ -159,7 +159,7 @@ const About = () => {
               transition={{ delay: 1.0, duration: 0.8 }}
               className="bg-white p-4 sm:p-6 rounded-xl shadow-lg"
             >
-              <h4 className="text-xl sm:text-2xl font-bold text-gray-800 mb-3 sm:mb-4 underline">
+              <h4 className="text-xl sm:text-2xl font-bold text-secondary mb-3 sm:mb-4 underline">
                 Wind Energy Solutions
               </h4>
               <ul className="space-y-2 sm:space-y-3">
@@ -172,7 +172,7 @@ const About = () => {
                     className="flex items-start gap-2 sm:gap-3"
                   >
                     <FiCheckCircle className="text-primary text-lg sm:text-xl flex-shrink-0 mt-0.5" />
-                    <span className="text-gray-700 text-sm sm:text-base">{item}</span>
+                    <span className="text-secondary text-sm sm:text-base">{item}</span>
                   </motion.li>
                 ))}
               </ul>

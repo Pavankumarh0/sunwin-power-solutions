@@ -31,7 +31,7 @@ export const getAnalyticsInstance = async () => {
     const supported = await isSupported();
     if (supported) {
       return getAnalytics(app);
-    }
+}
   } catch (error) {
     console.warn('Firebase Analytics not available:', error);
   }

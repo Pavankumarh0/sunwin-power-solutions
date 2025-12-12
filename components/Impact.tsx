@@ -76,10 +76,10 @@ const Impact = () => {
               Our Impact
             </div>
           </motion.div>
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-800 mb-3 sm:mb-4 px-2">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-secondary mb-3 sm:mb-4 px-2">
             Making a <span className="text-primary">Difference</span>
           </h2>
-          <p className="text-gray-600 max-w-2xl mx-auto text-sm sm:text-base px-4">
+          <p className="text-secondary max-w-2xl mx-auto text-sm sm:text-base px-4">
             Empowering homes and businesses with clean, sustainable energy solutions across Tamil Nadu
           </p>
         </motion.div>
@@ -109,7 +109,7 @@ const Impact = () => {
             <div className="w-10 h-10 sm:w-12 sm:h-12 bg-primary/10 rounded-full flex items-center justify-center flex-shrink-0">
               <FiAward className="w-5 h-5 sm:w-6 sm:h-6 text-primary" />
             </div>
-            <h3 className="text-xl sm:text-2xl md:text-3xl font-bold text-gray-800">
+            <h3 className="text-xl sm:text-2xl md:text-3xl font-bold text-secondary">
               Why Choose Us
             </h3>
           </div>
@@ -126,7 +126,7 @@ const Impact = () => {
                 <div className="flex-shrink-0 w-5 h-5 sm:w-6 sm:h-6 bg-green-500 rounded-full flex items-center justify-center mt-0.5 group-hover:scale-110 transition-transform">
                   <FiCheck className="w-3 h-3 sm:w-4 sm:h-4 text-white" />
                 </div>
-                <p className="text-gray-700 font-medium text-sm sm:text-base">{achievement}</p>
+                <p className="text-secondary font-medium text-sm sm:text-base">{achievement}</p>
               </motion.div>
             ))}
           </div>
@@ -139,7 +139,7 @@ const Impact = () => {
           transition={{ delay: 1.5, duration: 0.8 }}
           className="text-center mt-8 sm:mt-10 md:mt-12"
         >
-          <p className="text-gray-600 mb-4 sm:mb-6 text-base sm:text-lg px-4">
+          <p className="text-secondary mb-4 sm:mb-6 text-base sm:text-lg px-4">
             Experience the power of sustainable energy with our reliable solar solutions. Start your journey towards a greener future today.
           </p>
           <motion.div
@@ -202,19 +202,21 @@ const StatCard = ({ stat, isInView, index }: { stat: any; isInView: boolean; ind
 
       {/* Number with Counter Animation */}
       <div className="mb-2">
-        <span className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-800">
+        <span className="text-3xl sm:text-4xl md:text-5xl font-bold text-secondary">
           {typeof count === 'number' && count % 1 !== 0 ? count.toFixed(1) : count.toLocaleString()}
         </span>
-        <span className="text-2xl sm:text-3xl md:text-4xl font-bold text-primary ml-1">
+        <span className={`text-2xl sm:text-3xl md:text-4xl font-bold ml-1 ${
+          stat.suffix === '+' || stat.suffix === 'MW+' || stat.suffix === 'K+' ? 'text-green-500' : 'text-primary'
+        }`}>
           {stat.suffix}
         </span>
       </div>
 
       {/* Label */}
-      <h4 className="text-base sm:text-lg font-semibold text-gray-800 mb-1 sm:mb-2">{stat.label}</h4>
+      <h4 className="text-base sm:text-lg font-semibold text-secondary mb-1 sm:mb-2">{stat.label}</h4>
 
       {/* Description */}
-      <p className="text-gray-600 text-xs sm:text-sm">{stat.description}</p>
+      <p className="text-secondary text-xs sm:text-sm">{stat.description}</p>
 
       {/* Progress Bar Animation */}
       <div className="mt-3 sm:mt-4 h-1 bg-gray-200 rounded-full overflow-hidden">

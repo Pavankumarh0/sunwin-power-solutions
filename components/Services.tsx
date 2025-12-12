@@ -87,10 +87,10 @@ const Services = () => {
           transition={{ duration: 0.8 }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-800 mb-4">
+          <h2 className="text-4xl md:text-5xl font-bold text-secondary mb-4">
             Our <span className="text-primary">Services</span>
           </h2>
-          <p className="text-gray-600 max-w-2xl mx-auto">
+          <p className="text-secondary max-w-2xl mx-auto">
             Installation and Commissioning services of Solar Power Plant range from kW to MW capacity
           </p>
         </motion.div>
@@ -117,29 +117,29 @@ const Services = () => {
                 <div className="absolute bottom-6 left-1/2 transform -translate-x-1/2 text-white">
                   {service.icon}
                 </div>
-                </div>
+              </div>
 
               {/* Content Section */}
               <div className="w-full p-8 text-center">
-                <h3 className="text-2xl md:text-3xl font-bold text-gray-500 mb-2">
+                <h3 className="text-2xl md:text-3xl font-bold text-secondary mb-2">
                   {service.title}
                 </h3>
                 {service.subtitle && (
                   <p className="text-primary font-semibold mb-4">{service.subtitle}</p>
                 )}
-                <p className="text-gray-600 mb-6 leading-relaxed">
+                <p className="text-secondary mb-6 leading-relaxed">
                   {service.description}
                 </p>
 
                 {/* Service Details */}
                 {service.details.map((detail, detailIndex) => (
                   <div key={detailIndex} className="mb-6">
-                    <h4 className="text-lg font-bold text-gray-800 mb-3 underline">
+                    <h4 className="text-lg font-bold text-secondary mb-3 underline">
                       {detail.category}
                     </h4>
                     <ul className="space-y-2 text-left max-w-2xl mx-auto">
                       {detail.items.map((item, itemIndex) => (
-                        <li key={itemIndex} className="flex items-start gap-2 text-gray-700">
+                        <li key={itemIndex} className="flex items-start gap-2 text-secondary">
                           <FiCheckCircle className="text-primary flex-shrink-0 mt-1" />
                           <span className="text-sm">{item}</span>
                         </li>

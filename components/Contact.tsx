@@ -114,10 +114,10 @@ const Contact = () => {
           transition={{ duration: 0.8 }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-800 mb-4">
+          <h2 className="text-4xl md:text-5xl font-bold text-secondary mb-4">
             Get In <span className="text-primary">Touch</span>
           </h2>
-          <p className="text-gray-600 max-w-2xl mx-auto">
+          <p className="text-secondary max-w-2xl mx-auto">
             Ready to harness the power of solar energy? Contact us today for a free consultation
           </p>
         </motion.div>
@@ -131,7 +131,7 @@ const Contact = () => {
           >
             <form onSubmit={handleSubmit} className="space-y-6">
               <div>
-                <label htmlFor="name" className="block text-gray-700 font-semibold mb-2">
+                <label htmlFor="name" className="block text-secondary font-semibold mb-2">
                   Full Name *
                 </label>
                 <input
@@ -148,7 +148,7 @@ const Contact = () => {
 
               <div className="grid md:grid-cols-2 gap-6">
                 <div>
-                  <label htmlFor="email" className="block text-gray-700 font-semibold mb-2">
+                  <label htmlFor="email" className="block text-secondary font-semibold mb-2">
                     Email *
                   </label>
                   <input
@@ -164,7 +164,7 @@ const Contact = () => {
                 </div>
 
                 <div>
-                  <label htmlFor="phone" className="block text-gray-700 font-semibold mb-2">
+                  <label htmlFor="phone" className="block text-secondary font-semibold mb-2">
                     Phone *
                   </label>
                   <input
@@ -181,7 +181,7 @@ const Contact = () => {
               </div>
 
               <div>
-                <label htmlFor="service" className="block text-gray-700 font-semibold mb-2">
+                <label htmlFor="service" className="block text-secondary font-semibold mb-2">
                   Service Interested In
                 </label>
                 <select
@@ -204,7 +204,7 @@ const Contact = () => {
               </div>
 
               <div>
-                <label htmlFor="message" className="block text-gray-700 font-semibold mb-2">
+                <label htmlFor="message" className="block text-secondary font-semibold mb-2">
                   Message *
                 </label>
                 <textarea
@@ -252,25 +252,25 @@ const Contact = () => {
                   {info.icon}
                 </div>
                 <div>
-                  <h3 className="text-xl font-bold text-gray-800 mb-2">{info.title}</h3>
+                  <h3 className="text-xl font-bold text-secondary mb-2">{info.title}</h3>
                   {info.details.map((detail, idx) => (
                     <div key={idx}>
                       {info.type === 'phone' ? (
                         <a 
                           href={`tel:${detail.replace(/\s/g, '')}`}
-                          className="text-gray-600 hover:text-primary transition-colors hover:underline block"
+                          className="text-secondary hover:text-primary transition-colors hover:underline block"
                         >
                           {detail}
                         </a>
                       ) : info.type === 'email' ? (
                         <a 
                           href={`mailto:${detail}`}
-                          className="text-gray-600 hover:text-primary transition-colors hover:underline block"
+                          className="text-secondary hover:text-primary transition-colors hover:underline block"
                         >
                           {detail}
                         </a>
                       ) : (
-                        <p className="text-gray-600">
+                        <p className="text-secondary">
                           {detail}
                         </p>
                       )}
@@ -321,7 +321,7 @@ const Contact = () => {
                 {/* Close Button - Top Right */}
                 <button
                   onClick={closeResult}
-                  className="absolute top-4 right-4 w-8 h-8 flex items-center justify-center rounded-full hover:bg-gray-100 transition-colors text-gray-500 hover:text-gray-700"
+                  className="absolute top-4 right-4 w-8 h-8 flex items-center justify-center rounded-full hover:bg-gray-100 transition-colors text-secondary hover:text-secondary-dark"
                   aria-label="Close"
                 >
                   <FiX className="w-5 h-5" />
@@ -355,7 +355,7 @@ const Contact = () => {
                   </h3>
 
                   {/* Message */}
-                  <p className={`text-gray-700 mb-6 ${
+                  <p className={`text-secondary mb-6 ${
                     success ? 'text-green-600' : 'text-red-600'
                   }`}>
                     {success 

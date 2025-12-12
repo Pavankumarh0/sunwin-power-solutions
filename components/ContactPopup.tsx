@@ -126,13 +126,13 @@ const ContactPopup = () => {
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                       </svg>
                     </div>
-                    <h4 className="text-lg font-bold text-gray-800">Thank You!</h4>
-                    <p className="text-gray-600 text-sm">We'll contact you soon.</p>
+                    <h4 className="text-lg font-bold text-secondary">Thank You!</h4>
+                    <p className="text-secondary text-sm">We'll contact you soon.</p>
                   </motion.div>
                 ) : (
                   <form onSubmit={handleSubmit} className="space-y-3">
                     <div className="relative">
-                      <FiUser className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400" size={18} />
+                      <FiUser className="absolute left-3 top-1/2 -translate-y-1/2 text-secondary" size={18} />
                       <input
                         type="text"
                         name="name"
@@ -145,7 +145,7 @@ const ContactPopup = () => {
                     </div>
 
                     <div className="relative">
-                      <FiPhone className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400" size={18} />
+                      <FiPhone className="absolute left-3 top-1/2 -translate-y-1/2 text-secondary" size={18} />
                       <input
                         type="tel"
                         name="phone"
@@ -165,7 +165,7 @@ const ContactPopup = () => {
                       {isSubmitting ? 'Submitting...' : 'Get Free Quote'}
                     </button>
 
-                    <p className="text-center text-xs text-gray-500 pt-1">
+                    <p className="text-center text-xs text-secondary pt-1">
                       Or call us at{' '}
                       <a href="tel:+919500164901" className="text-primary font-semibold">
                         +91 9500164901

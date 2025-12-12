@@ -43,80 +43,65 @@ const Hero = () => {
         <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/50 to-transparent w-full md:w-3/4"></div>
       </div>
 
-      {/* Diagonal Bottom Edge */}
-      <div className="absolute bottom-0 left-0 right-0 z-10">
-        <svg 
-          viewBox="0 0 1440 120" 
-          fill="none" 
-          xmlns="http://www.w3.org/2000/svg"
-          className="w-full h-auto"
-          preserveAspectRatio="none"
-        >
-          <path 
-            d="M0 120L1440 120L1440 60C1440 60 1200 0 720 60C240 120 0 60 0 60L0 120Z" 
-            fill="white"
-          />
-        </svg>
-      </div>
-
       {/* Content */}
       <div className="container mx-auto px-3 sm:px-4 z-10 max-w-full">
         <motion.div
           initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
-          className="w-full max-w-4xl"
+          className="w-full max-w-4xl pl-6 sm:pl-8 md:pl-12 lg:pl-16"
         >
-          {/* Subtitle Tag */}
-          <motion.div
-            initial={{ opacity: 0, x: -30 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ delay: 0.2, duration: 0.6 }}
-            className="mb-4 sm:mb-6"
-          >
-            <span className="inline-block bg-primary/90 text-white px-3 sm:px-4 py-1.5 sm:py-2 rounded text-[10px] sm:text-xs md:text-sm font-semibold tracking-[0.15em] sm:tracking-[0.2em] uppercase">
-              Powering a Green<span className="text-secondary-light">er</span> Tomorrow
-            </span>
-          </motion.div>
-
           {/* Main Heading */}
           <motion.h1
-            className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-white mb-4 sm:mb-6 leading-tight"
+            className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl 2xl:text-8xl font-bold mb-3 sm:mb-4 md:mb-6 leading-tight"
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.3, duration: 0.8 }}
           >
-            <span className="block">Customized Solar Solutions,</span>
-            <span className="block">Engineered for Excellence</span>
+            <span className="block text-white whitespace-normal sm:whitespace-nowrap">Power Your Future</span>
+            <span className="block text-primary whitespace-normal sm:whitespace-nowrap">With Solar Energy</span>
           </motion.h1>
 
           {/* Description */}
           <motion.p
-            className="text-sm sm:text-base md:text-lg lg:text-xl text-gray-200 mb-6 sm:mb-8 md:mb-10 max-w-2xl leading-relaxed pr-4"
+            className="text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl text-white mb-4 sm:mb-6 md:mb-8 lg:mb-10 max-w-full sm:max-w-2xl md:max-w-3xl leading-relaxed"
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.5, duration: 0.8 }}
           >
-            8+ years of expertise in custom solar PV systems for homes, businesses, and industries—delivering quality, precision, and sustainable energy.
+            Leading service provider of solar renewable energy solutions. Expertise in custom solar power systems for residential, commercial and industries sectors. Delivering high quality, reliability and sustainable power solutions.
           </motion.p>
 
-          {/* CTA Button */}
+          {/* CTA Buttons */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.7, duration: 0.8 }}
+            className="flex flex-nowrap items-center gap-3 sm:gap-4 md:gap-6"
           >
             <motion.div
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className="inline-block"
+              className="flex items-center"
             >
               <Link
                 href="/contact"
-                className="bg-primary text-white px-6 sm:px-8 md:px-10 py-3 sm:py-4 rounded-full font-bold flex items-center gap-2 sm:gap-3 hover:bg-primary-dark transition-all shadow-lg text-xs sm:text-sm md:text-base tracking-wide uppercase"
+                className="bg-primary text-white px-4 sm:px-6 md:px-8 lg:px-10 py-2 sm:py-3 md:py-4 rounded-full font-bold flex items-center gap-2 sm:gap-3 hover:bg-primary-dark transition-all shadow-lg text-[11px] sm:text-xs md:text-sm lg:text-base tracking-wide"
               >
-                Contact Us
-                <FiArrowRight size={18} className="sm:w-5 sm:h-5" />
+                Get Started
+                <FiArrowRight size={16} className="sm:w-[18px] sm:h-[18px] md:w-5 md:h-5" />
+              </Link>
+            </motion.div>
+            <motion.div
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              className="flex items-center"
+            >
+              <Link
+                href="#services"
+                className="bg-white text-secondary px-4 sm:px-6 md:px-8 lg:px-10 py-2 sm:py-3 md:py-4 rounded-full font-bold flex items-center hover:bg-gray-100 transition-all shadow-lg text-[11px] sm:text-xs md:text-sm lg:text-base tracking-wide"
+              >
+                Our Services
               </Link>
             </motion.div>
           </motion.div>

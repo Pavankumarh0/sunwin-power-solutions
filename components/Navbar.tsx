@@ -32,22 +32,22 @@ const Navbar = () => {
     <nav className={`fixed w-full z-50 bg-white overflow-hidden transition-shadow duration-300 ${
       scrolled ? 'shadow-2xl' : 'shadow-lg'
     }`}>
-      {/* Top Bar - Dark Blue */}
-      <div className="bg-secondary text-white py-2 sm:py-2.5 overflow-hidden">
+      {/* Top Bar - Blue */}
+      <div className="bg-secondary text-white py-1.5 sm:py-2 overflow-hidden">
         <div className="container mx-auto px-3 sm:px-4 flex justify-between items-center text-xs sm:text-sm">
           <div className="flex items-center gap-2">
-            <a href="mailto:sunwinps@gmail.com" className="flex items-center gap-2 hover:text-primary transition-colors">
+            <a href="mailto:sunwinps@gmail.com" className="flex items-center gap-2 hover:text-secondary transition-colors">
               <FiMail size={14} /> 
               <span className="text-xs sm:text-sm">sunwinps@gmail.com</span>
             </a>
           </div>
           <div className="flex items-center gap-3 sm:gap-4">
-            <span className="hidden sm:inline text-xs sm:text-sm text-gray-300">Follow Us:</span>
+            <span className="hidden sm:inline text-xs sm:text-sm text-white/80">Follow Us:</span>
             <a 
               href="https://www.facebook.com/share/1aYE6fbSHh/" 
               target="_blank"
               rel="noopener noreferrer"
-              className="hover:text-primary transition-colors"
+              className="hover:text-secondary transition-colors"
               aria-label="Facebook"
             >
               <FaFacebook size={16} />
@@ -56,7 +56,7 @@ const Navbar = () => {
               href="https://twitter.com" 
               target="_blank"
               rel="noopener noreferrer"
-              className="hover:text-primary transition-colors"
+              className="hover:text-secondary transition-colors"
               aria-label="Twitter"
             >
               <FaTwitter size={16} />
@@ -65,7 +65,7 @@ const Navbar = () => {
               href="https://www.instagram.com/sunwinps?igsh=MWtuaHhuNDhmdHl3dg==" 
               target="_blank"
               rel="noopener noreferrer"
-              className="hover:text-primary transition-colors"
+              className="hover:text-secondary transition-colors"
               aria-label="Instagram"
             >
               <FaInstagram size={16} />
@@ -76,9 +76,9 @@ const Navbar = () => {
 
       {/* Main Navigation - White background */}
       <div className="container mx-auto px-3 sm:px-4 overflow-hidden bg-white/95 backdrop-blur-sm">
-        <div className="flex justify-between items-center h-14 sm:h-16 md:h-20">
+        <div className="flex justify-between items-center h-12 sm:h-14 md:h-16">
           {/* Logo */}
-          <Link href="/" className="flex items-center gap-2 flex-shrink-0">
+          <Link href="/" className="flex items-center gap-2 flex-shrink-0 pl-6 sm:pl-8 md:pl-12 lg:pl-16">
             <motion.div
               whileHover={{ scale: 1.05 }}
               transition={{ duration: 0.3 }}
@@ -88,7 +88,7 @@ const Navbar = () => {
                 alt="Sunwin Power Solutions Logo"
                 width={240}
                 height={80}
-                className="h-10 sm:h-12 md:h-16 lg:h-20 w-auto"
+                className="h-8 sm:h-10 md:h-12 lg:h-14 w-auto"
                 priority
               />
             </motion.div>
@@ -100,7 +100,7 @@ const Navbar = () => {
               <Link
                 key={item.name}
                 href={item.href}
-                className="font-medium text-gray-700 transition-colors hover:text-primary text-sm lg:text-base"
+                className="font-medium text-secondary transition-colors hover:text-primary text-sm lg:text-base"
               >
                 {item.name}
               </Link>
@@ -122,7 +122,7 @@ const Navbar = () => {
           {/* Mobile Menu Button */}
           <button
             onClick={() => setIsOpen(!isOpen)}
-            className="md:hidden text-gray-800 flex-shrink-0 p-2"
+            className="md:hidden text-secondary flex-shrink-0 p-2"
             aria-label="Toggle menu"
           >
             {isOpen ? <FiX size={24} /> : <FiMenu size={24} />}
@@ -153,7 +153,7 @@ const Navbar = () => {
                 <Link
                   href={item.href}
                   onClick={() => setIsOpen(false)}
-                  className="block text-gray-700 font-medium hover:text-primary hover:bg-gray-50 transition-all py-2.5 sm:py-3 px-4 rounded-lg hover:shadow-sm text-base"
+                  className="block text-secondary font-medium hover:text-primary hover:bg-gray-50 transition-all py-2.5 sm:py-3 px-4 rounded-lg hover:shadow-sm text-base"
                 >
                   {item.name}
                 </Link>
