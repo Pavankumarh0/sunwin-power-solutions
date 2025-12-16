@@ -54,14 +54,14 @@ const Services = () => {
     {
       icon: <FiSettings className="w-12 h-12" />,
       title: 'Operation and Maintenance of Solar Power Plants',
-      subtitle: 'From KW to MW scale',
+      subtitle: 'From kW to MW scale',
       description: 'Comprehensive O&M services to maximize energy generation and extend equipment lifespan.',
       image: '/images/operation-maintenance.jpg',
       details: [
         {
           category: 'O&M Activities',
           items: [
-            'Maximize Energy Generation (Kwh)',
+            'Maximize Energy Generation (kWh)',
             'Reduce down time and losses',
             'Ensure Safety and Compliance',
             'Extend Equipment life span by carry out the periodical maintenance in the solar plant',

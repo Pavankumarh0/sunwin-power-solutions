@@ -98,7 +98,7 @@ const Contact = () => {
       details: [
         'Plot No-19, Shop #4 Janakiram Nagar',
         'Kadappa Road, Puthagaram',
-        'Kollathur Teachers Colony',
+        'Kolathur Teachers Colony',
         'Chennai 600 099, Tamil Nadu, India'
       ],
       type: 'address',

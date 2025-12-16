@@ -50,7 +50,10 @@ const About = () => {
             About <span className="text-primary">Sunwin Power Solutions</span>
           </h2>
           <p className="text-secondary max-w-2xl mx-auto text-sm sm:text-base px-4">
-            Leading service provider of solar renewable energy solutions. Expertise in custom solar power systems for residential, commercial and industries sectors. Delivering high quality, reliability and sustainable power solutions.
+            <span className="block">Leading service provider of solar renewable energy solutions.</span>
+            <span className="block">Expertise in custom solar power systems for residential, commercial</span>
+            <span className="block">and industries sectors.</span>
+            <span className="block">Delivering high quality, reliability and sustainable power solutions.</span>
           </p>
         </motion.div>
 
@@ -87,7 +90,7 @@ const About = () => {
             transition={{ duration: 0.8, delay: 0.4 }}
           >
             <h3 className="text-2xl sm:text-3xl font-bold text-secondary mb-4 sm:mb-6">
-              Over 20 years of Expertise in the Renewable Energy Sector (Solar & Wind).
+              Over 20 years of Expertise in the Renewable Energy Sector (Solar & Wind)
             </h3>
             <p className="text-secondary mb-4 sm:mb-6 leading-relaxed text-sm sm:text-base">
               With more than 20 years of proven experience, we have deep technical knowledge, strong execution
