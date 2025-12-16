@@ -111,7 +111,9 @@ const Services = () => {
                   src={service.image}
                   alt={service.title}
                   fill
-                  className="object-cover object-center"
+                  className={service.title === 'Operation and Maintenance of Solar Power Plants' 
+                    ? 'object-cover object-left' 
+                    : 'object-cover object-center'}
                 />
                 <div className="absolute inset-0 bg-gradient-to-r from-primary/20 to-transparent"></div>
                 <div className="absolute bottom-6 left-1/2 transform -translate-x-1/2 text-white">

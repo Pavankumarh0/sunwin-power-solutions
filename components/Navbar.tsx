@@ -4,7 +4,7 @@ import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { FiMenu, FiX, FiMail, FiArrowRight } from 'react-icons/fi';
-import { FaFacebook, FaInstagram, FaYoutube, FaTwitter } from 'react-icons/fa';
+import { FaFacebook, FaInstagram, FaYoutube } from 'react-icons/fa';
 import Image from 'next/image';
 
 const Navbar = () => {
@@ -51,15 +51,6 @@ const Navbar = () => {
               aria-label="Facebook"
             >
               <FaFacebook size={16} />
-            </a>
-            <a 
-              href="https://twitter.com" 
-              target="_blank"
-              rel="noopener noreferrer"
-              className="hover:text-secondary transition-colors"
-              aria-label="Twitter"
-            >
-              <FaTwitter size={16} />
             </a>
             <a 
               href="https://www.instagram.com/sunwinps?igsh=MWtuaHhuNDhmdHl3dg==" 

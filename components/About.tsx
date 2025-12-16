@@ -46,15 +46,16 @@ const About = () => {
           transition={{ duration: 0.8 }}
           className="text-center mb-10 sm:mb-12 md:mb-16"
         >
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-secondary mb-3 sm:mb-4 px-2">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-secondary mb-3 sm:mb-4">
             About <span className="text-primary">Sunwin Power Solutions</span>
           </h2>
-          <p className="text-secondary max-w-2xl mx-auto text-sm sm:text-base px-4">
-            <span className="block">Leading service provider of solar renewable energy solutions.</span>
-            <span className="block">Expertise in custom solar power systems for residential, commercial</span>
-            <span className="block">and industries sectors.</span>
-            <span className="block">Delivering high quality, reliability and sustainable power solutions.</span>
-          </p>
+          <div className="max-w-4xl mx-auto px-4 sm:px-6">
+            <p className="text-secondary text-sm sm:text-base text-center leading-relaxed space-y-1">
+              <span className="block whitespace-normal">Leading service provider of solar renewable energy solutions.</span>
+              <span className="block whitespace-normal">Expertise in custom solar power systems for residential, <span className="whitespace-nowrap">commercial and industries sectors.</span></span>
+              <span className="block whitespace-normal">Delivering high quality, reliability and sustainable power solutions.</span>
+            </p>
+          </div>
         </motion.div>
 
         <div className="grid md:grid-cols-2 gap-8 sm:gap-10 md:gap-12 items-center mb-10 sm:mb-12 md:mb-16">

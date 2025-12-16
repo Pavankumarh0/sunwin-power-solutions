@@ -121,24 +121,8 @@ const Footer = () => {
 
         {/* Bottom Bar */}
         <div className="border-t border-gray-300 pt-8 mt-8">
-          <div className="flex flex-col md:flex-row justify-between items-center gap-4">
-            <p className="text-sm text-gray-700 text-center md:text-left">
-              © {currentYear} Sunwin Power Solutions. All rights reserved.
-            </p>
-            <div className="flex gap-6 text-sm">
-              <Link href="#" className="text-gray-700 hover:text-primary transition-colors">
-                Privacy Policy
-              </Link>
-              <Link href="#" className="text-gray-700 hover:text-primary transition-colors">
-                Terms of Service
-              </Link>
-              <Link href="#" className="text-gray-700 hover:text-primary transition-colors">
-                Sitemap
-              </Link>
-            </div>
-          </div>
-          <p className="text-xs text-gray-600 text-center mt-4">
-            Proprietor: Sugantha N
+          <p className="text-sm text-gray-700 text-center">
+            © {currentYear} Sunwin Power Solutions. All rights reserved.
           </p>
         </div>
       </div>
