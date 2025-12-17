@@ -120,8 +120,8 @@ const Footer = () => {
         </div>
 
         {/* Bottom Bar */}
-        <div className="border-t border-gray-300 pt-8 mt-8">
-          <p className="text-sm text-gray-700 text-center">
+        <div className="border-t border-gray-300 pt-8 mt-8 pb-16 sm:pb-0">
+          <p className="text-xs sm:text-sm text-gray-700 text-center">
             © {currentYear} Sunwin Power Solutions. All rights reserved.
           </p>
         </div>
