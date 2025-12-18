@@ -315,7 +315,7 @@ const Contact = () => {
                 transition={{ type: "spring", duration: 0.5 }}
                 onClick={(e) => e.stopPropagation()}
                 className={`relative bg-white rounded-2xl shadow-2xl max-w-md w-full p-6 ${
-                  success ? 'border-2 border-green-500' : 'border-2 border-red-500'
+                  success ? 'border-2 border-primary' : 'border-2 border-red-500'
                 }`}
               >
                 {/* Close Button - Top Right */}
@@ -336,12 +336,12 @@ const Contact = () => {
                     transition={{ delay: 0.2, type: "spring", stiffness: 200 }}
                     className={`w-20 h-20 mx-auto mb-4 rounded-full flex items-center justify-center ${
                       success 
-                        ? 'bg-green-100 text-green-600' 
+                        ? 'bg-gradient-to-br from-primary/20 to-secondary/20' 
                         : 'bg-red-100 text-red-600'
                     }`}
                   >
                     {success ? (
-                      <FiCheckCircle className="w-10 h-10" />
+                      <FiCheckCircle className="w-10 h-10 text-primary" />
                     ) : (
                       <FiAlertCircle className="w-10 h-10" />
                     )}
@@ -349,14 +349,14 @@ const Contact = () => {
 
                   {/* Title */}
                   <h3 className={`text-2xl font-bold mb-2 ${
-                    success ? 'text-green-700' : 'text-red-700'
+                    success ? 'text-secondary' : 'text-red-700'
                   }`}>
                     {success ? 'Message Sent Successfully!' : 'Submission Failed'}
                   </h3>
 
                   {/* Message */}
-                  <p className={`text-secondary mb-6 ${
-                    success ? 'text-green-600' : 'text-red-600'
+                  <p className={`mb-6 ${
+                    success ? 'text-gray-600' : 'text-red-600'
                   }`}>
                     {success 
                       ? "Thank you for contacting us! We'll get back to you soon."
@@ -371,7 +371,7 @@ const Contact = () => {
                     whileTap={{ scale: 0.95 }}
                     className={`w-full py-3 rounded-lg font-semibold transition-colors ${
                       success
-                        ? 'bg-green-600 hover:bg-green-700 text-white'
+                        ? 'bg-gradient-to-r from-secondary to-primary hover:from-secondary-dark hover:to-primary-dark text-white'
                         : 'bg-red-600 hover:bg-red-700 text-white'
                     }`}
                   >

@@ -56,13 +56,13 @@ export async function POST(request: NextRequest) {
             <style>
               body { font-family: Arial, sans-serif; line-height: 1.6; color: #333; }
               .container { max-width: 600px; margin: 0 auto; padding: 20px; }
-              .header { background: linear-gradient(135deg, #5bb450 0%, #52a447 100%); color: white; padding: 20px; border-radius: 8px 8px 0 0; }
+              .header { background: linear-gradient(135deg, #00368C 0%, #FF8700 100%); color: white; padding: 20px; border-radius: 8px 8px 0 0; }
               .content { background: #f9f9f9; padding: 20px; border-radius: 0 0 8px 8px; }
               .field { margin-bottom: 15px; }
-              .label { font-weight: bold; color: #5bb450; }
-              .value { margin-top: 5px; padding: 10px; background: white; border-radius: 4px; border-left: 3px solid #5bb450; }
+              .label { font-weight: bold; color: #00368C; }
+              .value { margin-top: 5px; padding: 10px; background: white; border-radius: 4px; border-left: 3px solid #FF8700; }
               .footer { margin-top: 20px; padding-top: 20px; border-top: 1px solid #ddd; font-size: 12px; color: #666; }
-              .button { display: inline-block; padding: 10px 20px; background: #5bb450; color: white; text-decoration: none; border-radius: 4px; margin-top: 10px; }
+              .button { display: inline-block; padding: 10px 20px; background: linear-gradient(135deg, #00368C 0%, #FF8700 100%); color: white; text-decoration: none; border-radius: 4px; margin-top: 10px; }
             </style>
           </head>
           <body>
@@ -96,7 +96,7 @@ export async function POST(request: NextRequest) {
                 </div>
                 <div style="margin-top: 20px;">
                   <a href="mailto:${email}?subject=Re: Your inquiry about ${service || 'our services'}" class="button">Reply via Email</a>
-                  <a href="tel:${phone.replace(/\s/g, '')}" class="button" style="background: #28a745; margin-left: 10px;">Call Now</a>
+                  <a href="tel:${phone.replace(/\s/g, '')}" class="button" style="background: linear-gradient(135deg, #FF8700 0%, #E67A00 100%); margin-left: 10px;">Call Now</a>
                 </div>
                 <div class="footer">
                   <p>This is an automated notification from Sunwin Power Solutions website.</p>
