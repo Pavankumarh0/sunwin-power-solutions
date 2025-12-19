@@ -26,17 +26,17 @@ const GalleryPreview = () => {
 
   // Create gallery items - Ground Mount first, then Roof Top
   const allGalleryItems = [
-    // Ground Mount Pics (Ground Mount category) - First
+    // Ground Mount Pics (Ground Mounted Solar category) - First
     ...groundMountImages.map((imageName, index) => ({
       image: `/images/Ground Mount pic/${imageName}`,
       title: `Ground Mount Solar ${index + 1}`,
-      category: 'Ground Mount',
+      category: 'Ground Mounted Solar',
     })),
-    // Roof-Top Pics (Roof Solar category) - After Ground Mount
+    // Roof-Top Pics (Roof Top Solar category) - After Ground Mount
     ...roofTopImages.map((imageName, index) => ({
       image: `/images/Roof-Top Pics/${imageName}`,
       title: `Rooftop Solar ${index + 1}`,
-      category: 'Roof Solar',
+      category: 'Roof Top Solar',
     })),
   ];
 

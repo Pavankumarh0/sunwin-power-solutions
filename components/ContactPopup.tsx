@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { FiX, FiPhone, FiUser } from 'react-icons/fi';
+import { FiX, FiPhone, FiUser, FiPackage, FiChevronDown } from 'react-icons/fi';
 import { collection, addDoc, serverTimestamp } from 'firebase/firestore';
 import { db } from '@/lib/firebase';
 
@@ -11,6 +11,7 @@ const ContactPopup = () => {
   const [formData, setFormData] = useState({
     name: '',
     phone: '',
+    service: '',
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitted, setSubmitted] = useState(false);
@@ -38,7 +39,7 @@ const ContactPopup = () => {
         name: formData.name,
         email: '',
         phone: formData.phone,
-        service: 'Website Popup Inquiry',
+        service: formData.service || 'Website Popup Inquiry',
         message: 'User submitted contact form from popup',
         timestamp: serverTimestamp(),
       });
@@ -52,7 +53,7 @@ const ContactPopup = () => {
             name: formData.name,
             email: 'N/A',
             phone: formData.phone,
-            service: 'Website Popup Inquiry',
+            service: formData.service || 'Website Popup Inquiry',
             message: 'User submitted contact form from popup',
           }),
         });
@@ -64,7 +65,7 @@ const ContactPopup = () => {
       setTimeout(() => {
         setIsOpen(false);
         setSubmitted(false);
-        setFormData({ name: '', phone: '' });
+        setFormData({ name: '', phone: '', service: '' });
       }, 2000);
     } catch (error) {
       console.error('Error:', error);
@@ -73,7 +74,7 @@ const ContactPopup = () => {
     }
   };
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
@@ -142,6 +143,27 @@ const ContactPopup = () => {
                         onChange={handleChange}
                         className="w-full pl-10 pr-4 py-3 text-base border border-gray-200 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent outline-none"
                       />
+                    </div>
+
+                    <div className="relative">
+                      <FiPackage className="absolute left-3 top-1/2 -translate-y-1/2 text-secondary pointer-events-none z-10" size={18} />
+                      <FiChevronDown className="absolute right-3 top-1/2 -translate-y-1/2 text-gray-400 pointer-events-none" size={18} />
+                      <select
+                        name="service"
+                        value={formData.service}
+                        onChange={handleChange}
+                        className="w-full pl-10 pr-10 py-3 text-base border border-gray-200 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent outline-none appearance-none bg-white"
+                      >
+                        <option value="">Select Service Type</option>
+                        <option value="Rooftop Solar System for Residential">Rooftop Solar System for Residential</option>
+                        <option value="Rooftop Solar System for Commercial">Rooftop Solar System for Commercial</option>
+                        <option value="Rooftop Solar systems for industrial Buildings">Rooftop Solar systems for industrial Buildings</option>
+                        <option value="Ground Mounted Solar Installation">Ground Mounted Solar Installation</option>
+                        <option value="Solar Power Plant Maintenance">Solar Power Plant Maintenance</option>
+                        <option value="Energy Audit">Energy Audit</option>
+                        <option value="Consultancy">Consultancy</option>
+                        <option value="Others">Others</option>
+                      </select>
                     </div>
 
                     <div className="relative">

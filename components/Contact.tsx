@@ -288,7 +288,7 @@ const Contact = () => {
               className="bg-gradient-to-br from-primary to-primary-dark text-white p-8 rounded-xl"
             >
               <h3 className="text-2xl font-bold mb-4">Business Hours</h3>
-              <p className="mb-2">Monday - Saturday: 8:00 AM - 7:00 PM</p>
+              <p className="mb-2">Monday - Saturday: 10:00 AM to 7:30PM</p>
               <p className="mb-4">Sunday: Closed</p>
             </motion.div>
           </motion.div>

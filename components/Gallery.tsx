@@ -11,7 +11,7 @@ const Gallery = () => {
   const isInView = useInView(ref, { once: true, margin: "-100px" });
   const [selectedCategory, setSelectedCategory] = useState('All');
 
-  const categories = ['All', 'Ground Mount', 'Roof Solar'];
+  const categories = ['All', 'Ground Mounted Solar', 'Roof Top Solar'];
 
   // Roof-Top Pics from /public/images/Roof-Top Pics/
   const roofTopImages = [
@@ -43,17 +43,17 @@ const Gallery = () => {
 
   // Create gallery items from all images
   const galleryItems = [
-    // Ground Mount Pics (Ground Mount category) - First
+    // Ground Mount Pics (Ground Mounted Solar category) - First
     ...groundMountImages.map((imageName, index) => ({
       image: `/images/Ground Mount pic/${imageName}`,
       title: `Ground Mount Solar ${index + 1}`,
-      category: 'Ground Mount',
+      category: 'Ground Mounted Solar',
     })),
-    // Roof-Top Pics (Roof Solar category) - After Ground Mount
+    // Roof-Top Pics (Roof Top Solar category) - After Ground Mount
     ...roofTopImages.map((imageName, index) => ({
       image: `/images/Roof-Top Pics/${imageName}`,
       title: `Rooftop Solar ${index + 1}`,
-      category: 'Roof Solar',
+      category: 'Roof Top Solar',
     })),
   ];
   const filteredItems = selectedCategory === 'All'
