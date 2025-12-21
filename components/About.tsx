@@ -13,7 +13,7 @@ const About = () => {
 
   const solarCompetencies = [
     'Installation & commissioning of rooftop solar systems (Residential, Commercial & Industrial).',
-    'Ground-mounted solar plant installation for KW-MW scale projects.',
+    'Ground-mounted solar plant installation for kW-MW scale projects.',
     'EPC services for solar developers.',
     'System design, engineering, and project management.',
     'Performance optimization, SCADA integration, and testing.',
@@ -30,7 +30,7 @@ const About = () => {
   ];
 
   const keyHighlights = [
-    'Capacity Range: From KW to MW scale',
+    'Capacity Range: From kW to MW scale',
     'Projects Turnkey solutions from design to commissioning',
     'Compliance with national and international standards',
     'Experienced engineering and project management team',

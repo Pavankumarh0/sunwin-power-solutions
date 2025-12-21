@@ -14,7 +14,7 @@ const Services = () => {
     {
       icon: <FiSun className="w-12 h-12" />,
       title: 'Installation and Commissioning Services',
-      subtitle: 'Solar Power Plant range from KW to MW capacity',
+      subtitle: 'Solar Power Plant range from kW to MW capacity',
       description: 'Complete installation and commissioning services for solar power plants of all scales.',
       image: 'https://images.unsplash.com/photo-1509391366360-2e959784a276?q=80&w=400',
       details: [
@@ -54,7 +54,7 @@ const Services = () => {
     {
       icon: <FiSettings className="w-12 h-12" />,
       title: 'Operation and Maintenance of Solar Power Plants',
-      subtitle: 'From KW to MW scale',
+      subtitle: 'From kW to MW scale',
       description: 'Comprehensive O&M services to maximize energy generation and extend equipment lifespan.',
       image: '/images/operation-maintenance.jpg',
       details: [
@@ -91,7 +91,7 @@ const Services = () => {
             Our <span className="text-primary">Services</span>
           </h2>
           <p className="text-secondary max-w-2xl mx-auto">
-            Installation and Commissioning services of Solar Power Plant range from KW to MW capacity
+            Installation and Commissioning services of Solar Power Plant range from kW to MW capacity
           </p>
         </motion.div>
 
@@ -167,7 +167,7 @@ const Services = () => {
           <h3 className="text-3xl font-bold mb-8 text-center">Key Highlights</h3>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {[
-              { title: 'Capacity Range', desc: 'From KW to MW scale' },
+              { title: 'Capacity Range', desc: 'From kW to MW scale' },
               { title: 'Turnkey Solutions', desc: 'Projects from design to commissioning' },
               { title: 'Compliance', desc: 'With national and international standards' },
               { title: 'Expert Team', desc: 'Experienced engineering and project management team' },
