@@ -68,8 +68,8 @@ const Navbar = () => {
       {/* Main Navigation - White background */}
       <div className="container mx-auto px-3 sm:px-4 overflow-hidden bg-white/95 backdrop-blur-sm">
         <div className="flex justify-between items-center h-12 sm:h-14 md:h-16">
-          {/* Logo */}
-          <Link href="/" className="flex items-center gap-2 flex-shrink-0 pl-6 sm:pl-8 md:pl-12 lg:pl-16">
+          {/* Logo - aligned with hero section content */}
+          <Link href="/" className="flex items-center gap-2 flex-shrink-0 pl-3 sm:pl-4 md:pl-8 lg:pl-12">
             <motion.div
               whileHover={{ scale: 1.05 }}
               transition={{ duration: 0.3 }}

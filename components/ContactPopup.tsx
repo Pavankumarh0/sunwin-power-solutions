@@ -146,6 +146,19 @@ const ContactPopup = () => {
                     </div>
 
                     <div className="relative">
+                      <FiPhone className="absolute left-3 top-1/2 -translate-y-1/2 text-secondary" size={18} />
+                      <input
+                        type="tel"
+                        name="phone"
+                        placeholder="Phone Number *"
+                        required
+                        value={formData.phone}
+                        onChange={handleChange}
+                        className="w-full pl-10 pr-4 py-3 text-base border border-gray-200 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent outline-none"
+                      />
+                    </div>
+
+                    <div className="relative">
                       <FiPackage className="absolute left-3 top-1/2 -translate-y-1/2 text-secondary pointer-events-none z-10" size={18} />
                       <FiChevronDown className="absolute right-3 top-1/2 -translate-y-1/2 text-gray-400 pointer-events-none" size={18} />
                       <select
@@ -164,19 +177,6 @@ const ContactPopup = () => {
                         <option value="Consultancy">Consultancy</option>
                         <option value="Others">Others</option>
                       </select>
-                    </div>
-
-                    <div className="relative">
-                      <FiPhone className="absolute left-3 top-1/2 -translate-y-1/2 text-secondary" size={18} />
-                      <input
-                        type="tel"
-                        name="phone"
-                        placeholder="Phone Number *"
-                        required
-                        value={formData.phone}
-                        onChange={handleChange}
-                        className="w-full pl-10 pr-4 py-3 text-base border border-gray-200 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent outline-none"
-                      />
                     </div>
 
                     <button
