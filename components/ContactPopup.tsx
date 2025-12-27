@@ -98,7 +98,7 @@ const ContactPopup = () => {
               animate={{ opacity: 1, scale: 1 }}
               exit={{ opacity: 0, scale: 0.95 }}
               transition={{ duration: 0.2 }}
-              className="bg-white rounded-2xl shadow-2xl w-full max-w-sm overflow-hidden"
+              className="bg-white rounded-2xl shadow-2xl w-full max-w-md overflow-hidden"
             >
               {/* Header */}
               <div className="bg-secondary p-4 text-white relative">
@@ -165,7 +165,7 @@ const ContactPopup = () => {
                         name="service"
                         value={formData.service}
                         onChange={handleChange}
-                        className="w-full pl-10 pr-10 py-3 text-base border border-gray-200 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent outline-none appearance-none bg-white"
+                        className="w-full pl-10 pr-14 py-3 text-base border border-gray-200 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent outline-none appearance-none bg-white"
                       >
                         <option value="">Select Service Type</option>
                         <option value="Rooftop Solar Systems for Residential">Rooftop Solar Systems for Residential</option>

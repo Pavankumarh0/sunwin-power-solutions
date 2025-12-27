@@ -41,7 +41,7 @@ const Navbar = () => {
               <span className="text-xs sm:text-sm">sunwinps@gmail.com</span>
             </a>
           </div>
-          <div className="flex items-center gap-3 sm:gap-4">
+          <div className="flex items-center gap-3 sm:gap-4 pr-0 sm:pr-11 md:pr-15 lg:pr-19">
             <span className="hidden sm:inline text-xs sm:text-sm text-white/80">Follow Us:</span>
             <a 
               href="https://www.facebook.com/share/1aYE6fbSHh/" 
@@ -86,7 +86,7 @@ const Navbar = () => {
           </Link>
 
           {/* Desktop Menu */}
-          <div className="hidden md:flex items-center gap-6 lg:gap-8">
+          <div className="hidden md:flex items-center gap-6 lg:gap-8 pr-15 lg:pr-19">
             {navItems.map((item) => (
               <Link
                 key={item.name}
@@ -113,7 +113,7 @@ const Navbar = () => {
           {/* Mobile Menu Button */}
           <button
             onClick={() => setIsOpen(!isOpen)}
-            className="md:hidden text-secondary flex-shrink-0 p-2"
+            className="md:hidden text-secondary flex-shrink-0 p-2 pr-0 sm:pr-[calc(2.5rem-0.1rem)]"
             aria-label="Toggle menu"
           >
             {isOpen ? <FiX size={24} /> : <FiMenu size={24} />}
