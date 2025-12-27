@@ -35,7 +35,7 @@ const Navbar = () => {
       {/* Top Bar - Blue */}
       <div className="bg-secondary text-white py-1.5 sm:py-2 overflow-hidden">
         <div className="container mx-auto px-3 sm:px-4 flex justify-between items-center text-xs sm:text-sm">
-          <div className="flex items-center gap-2 pl-9 sm:pl-11 md:pl-15 lg:pl-19">
+          <div className="flex items-center gap-2 pl-0 sm:pl-11 md:pl-15 lg:pl-19">
             <a href="mailto:sunwinps@gmail.com" className="flex items-center gap-2 hover:text-orange-400 transition-colors">
               <FiMail size={14} /> 
               <span className="text-xs sm:text-sm">sunwinps@gmail.com</span>
@@ -69,7 +69,7 @@ const Navbar = () => {
       <div className="container mx-auto px-3 sm:px-4 overflow-hidden bg-white/95 backdrop-blur-sm">
         <div className="flex justify-between items-center h-12 sm:h-14 md:h-16">
           {/* Logo - aligned with hero section content */}
-          <Link href="/" className="flex items-center gap-2 flex-shrink-0 pl-9 sm:pl-11 md:pl-15 lg:pl-19">
+          <Link href="/" className="flex items-center gap-2 flex-shrink-0 pl-0 sm:pl-[calc(2.5rem-0.1rem)] md:pl-15 lg:pl-19">
             <motion.div
               whileHover={{ scale: 1.05 }}
               transition={{ duration: 0.3 }}
