@@ -35,7 +35,7 @@ const Navbar = () => {
       {/* Top Bar - Blue */}
       <div className="bg-secondary text-white py-1.5 sm:py-2 overflow-hidden">
         <div className="container mx-auto px-3 sm:px-4 flex justify-between items-center text-xs sm:text-sm">
-          <div className="flex items-center gap-2 pl-8 sm:pl-10 md:pl-14 lg:pl-18">
+          <div className="flex items-center gap-2 pl-9 sm:pl-11 md:pl-15 lg:pl-19">
             <a href="mailto:sunwinps@gmail.com" className="flex items-center gap-2 hover:text-orange-500 transition-colors">
               <FiMail size={14} /> 
               <span className="text-xs sm:text-sm">sunwinps@gmail.com</span>
