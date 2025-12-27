@@ -168,13 +168,13 @@ const ContactPopup = () => {
                         className="w-full pl-10 pr-10 py-3 text-base border border-gray-200 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent outline-none appearance-none bg-white"
                       >
                         <option value="">Select Service Type</option>
-                        <option value="Rooftop Solar System for Residential">Rooftop Solar System for Residential</option>
-                        <option value="Rooftop Solar System for Commercial">Rooftop Solar System for Commercial</option>
-                        <option value="Rooftop Solar systems for industrial Buildings">Rooftop Solar systems for industrial Buildings</option>
+                        <option value="Rooftop Solar Systems for Residential">Rooftop Solar Systems for Residential</option>
+                        <option value="Rooftop Solar Systems for Commercial">Rooftop Solar Systems for Commercial</option>
+                        <option value="Rooftop Solar Systems for Industrial Buildings">Rooftop Solar Systems for Industrial Buildings</option>
                         <option value="Ground Mounted Solar Installation">Ground Mounted Solar Installation</option>
                         <option value="Solar Power Plant Maintenance">Solar Power Plant Maintenance</option>
                         <option value="Energy Audit">Energy Audit</option>
-                        <option value="Consultancy">Consultancy</option>
+                        <option value="Consultation">Consultation</option>
                         <option value="Others">Others</option>
                       </select>
                     </div>
