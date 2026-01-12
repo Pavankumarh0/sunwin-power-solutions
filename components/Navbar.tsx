@@ -69,7 +69,7 @@ const Navbar = () => {
       <div className="container mx-auto px-3 sm:px-4 overflow-hidden bg-white/95 backdrop-blur-sm">
         <div className="flex justify-between items-center h-12 sm:h-14 md:h-16">
           {/* Logo - aligned with hero section content */}
-          <Link href="/" className="flex items-center gap-2 flex-shrink-0 pl-0 sm:pl-[calc(2.5rem-0.1rem)] md:pl-15 lg:pl-19">
+          <Link href="/" className="flex items-center gap-2 flex-shrink-0 pl-0 sm:pl-[calc(2.5 rem-0.1rem)] md:pl-15 lg:pl-19">
             <motion.div
               whileHover={{ scale: 1.05 }}
               transition={{ duration: 0.3 }}

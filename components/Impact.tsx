@@ -47,7 +47,7 @@ const Impact = () => {
 
   const achievements = [
     'Authorized Partner with Leading Brands',
-    'Expert Team with 10+ Years Experience',
+    'Expert Team with 20+ Years Experience',
     '24/7 Customer Support & Maintenance',
     'EMI Options from reputed Banks',
   ];

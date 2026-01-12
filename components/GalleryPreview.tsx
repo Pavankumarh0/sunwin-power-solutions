@@ -36,7 +36,7 @@ const GalleryPreview = () => {
     ...roofTopImages.map((imageName, index) => ({
       image: `/images/Roof-Top Pics/${imageName}`,
       title: `Rooftop Solar ${index + 1}`,
-      category: 'Roof Top Solar',
+      category: 'RoofTop Solar',
     })),
   ];
 
