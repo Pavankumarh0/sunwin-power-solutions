@@ -69,9 +69,9 @@ const Hero = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.5, duration: 0.8 }}
           >
-            <span className="block">Leading service provider of solar renewable energy solutions.</span>
+            <span className="block">Leading solar energy solutions provider in Puthagaram, Chennai.</span>
             <span className="block">Expertise in custom solar power systems for residential, commercial and industries sectors.</span>
-            <span className="block">Delivering high quality, reliability and sustainable power solutions.</span>
+            <span className="block">Delivering high quality, reliability and sustainable power solutions in Tamil Nadu.</span>
           </motion.p>
 
           {/* CTA Buttons */}
