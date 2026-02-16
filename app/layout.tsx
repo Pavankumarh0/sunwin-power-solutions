@@ -11,14 +11,14 @@ export const metadata: Metadata = {
   authors: [{ name: "Sunwin Power Solutions" }],
   creator: "Sunwin Power Solutions",
   publisher: "Sunwin Power Solutions",
-  metadataBase: new URL("https://www.sunwinpower.com"),
+  metadataBase: new URL("https://www.sunwinpowersolutions.com"),
   alternates: {
     canonical: "/",
   },
   openGraph: {
     title: "Sunwin Power Solutions Puthagaram - Top Solar Energy Company in Chennai",
     description: "Leading solar energy solutions provider in Puthagaram, Chennai. Expert solar installations for residential, commercial & industrial sectors.",
-    url: "https://www.sunwinpower.com",
+    url: "https://www.sunwinpowersolutions.com",
     siteName: "Sunwin Power Solutions",
     locale: "en_IN",
     type: "website",
@@ -62,11 +62,11 @@ export default function RootLayout({
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "LocalBusiness",
-    "@id": "https://www.sunwinpower.com",
+    "@id": "https://www.sunwinpowersolutions.com",
     "name": "Sunwin Power Solutions",
-    "image": "https://www.sunwinpower.com/images/logo/sw logo.png",
+    "image": "https://www.sunwinpowersolutions.com/images/logo/sw logo.png",
     "description": "Leading solar energy solutions provider in Puthagaram, Chennai. Expert solar installations for residential, commercial & industrial sectors.",
-    "url": "https://www.sunwinpower.com",
+    "url": "https://www.sunwinpowersolutions.com",
     "telephone": "+91-9500164901",
     "email": "sunwinps@gmail.com",
     "priceRange": "$$",
@@ -97,7 +97,7 @@ export default function RootLayout({
       "closes": "19:30"
     },
     "sameAs": [
-      "https://www.sunwinpower.com"
+      "https://www.sunwinpowersolutions.com"
     ],
     "areaServed": {
       "@type": "City",

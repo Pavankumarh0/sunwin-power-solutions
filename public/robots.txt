@@ -2,5 +2,5 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://www.sunwinpower.com/sitemap.xml
+Sitemap: https://www.sunwinpowersolutions.com/sitemap.xml
 
