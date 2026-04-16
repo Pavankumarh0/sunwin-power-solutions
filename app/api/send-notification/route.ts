@@ -15,7 +15,7 @@ export async function POST(request: NextRequest) {
     }
 
     // Get email configuration from environment variables
-    const adminEmail = process.env.ADMIN_EMAIL || 'sunwinps@gmail.com';
+    const adminEmail = process.env.ADMIN_EMAIL || 'support@sunwinpowersolutions.com';
     const smtpHost = process.env.SMTP_HOST || 'smtp.gmail.com';
     const smtpPort = parseInt(process.env.SMTP_PORT || '587');
     const smtpUser = process.env.SMTP_USER;

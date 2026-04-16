@@ -4,7 +4,7 @@ import nodemailer from 'nodemailer';
 export async function GET() {
   try {
     // Get email configuration from environment variables
-    const adminEmail = process.env.ADMIN_EMAIL || 'sunwinps@gmail.com';
+    const adminEmail = process.env.ADMIN_EMAIL || 'support@sunwinpowersolutions.com';
     const smtpHost = process.env.SMTP_HOST || 'smtp.gmail.com';
     const smtpPort = parseInt(process.env.SMTP_PORT || '587');
     const smtpUser = process.env.SMTP_USER;
@@ -26,7 +26,7 @@ export async function GET() {
           },
           instructions: [
             '1. Create .env.local file in the root directory (same folder as package.json)',
-            '2. Add: SMTP_USER=sunwinps@gmail.com',
+            '2. Add: SMTP_USER=support@sunwinpowersolutions.com',
             '3. Add: SMTP_PASSWORD=your_app_password',
             '4. Restart your development server (npm run dev)'
           ]

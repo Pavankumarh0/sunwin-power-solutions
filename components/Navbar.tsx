@@ -36,9 +36,9 @@ const Navbar = () => {
       <div className="bg-secondary text-white py-1.5 sm:py-2 overflow-hidden">
         <div className="container mx-auto px-3 sm:px-4 flex justify-between items-center text-xs sm:text-sm">
           <div className="flex items-center gap-2 pl-0 sm:pl-11 md:pl-15 lg:pl-19">
-            <a href="mailto:sunwinps@gmail.com" className="flex items-center gap-2 hover:text-orange-400 transition-colors">
-              <FiMail size={14} /> 
-              <span className="text-xs sm:text-sm">sunwinps@gmail.com</span>
+            <a href="mailto:support@sunwinpowersolutions.com" className="flex items-center gap-2 hover:text-orange-400 transition-colors">
+              <FiMail size={14} />
+              <span className="text-xs sm:text-sm">support@sunwinpowersolutions.com</span>
             </a>
           </div>
           <div className="flex items-center gap-3 sm:gap-4 pr-0 sm:pr-11 md:pr-15 lg:pr-19">

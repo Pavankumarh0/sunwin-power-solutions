@@ -89,7 +89,7 @@ const Contact = () => {
     {
       icon: <FiMail className="w-6 h-6" />,
       title: 'Email',
-      details: ['sunwinps@gmail.com'],
+      details: ['support@sunwinpowersolutions.com'],
       type: 'email',
     },
     {

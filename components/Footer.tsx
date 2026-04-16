@@ -110,8 +110,8 @@ const Footer = () => {
               <li className="flex items-center gap-3">
                 <FiMail className="w-5 h-5 text-primary flex-shrink-0" />
                 <div className="text-sm">
-                  <a href="mailto:sunwinps@gmail.com" className="text-gray-700 hover:text-primary transition-colors block">
-                    sunwinps@gmail.com
+                  <a href="mailto:support@sunwinpowersolutions.com" className="text-gray-700 hover:text-primary transition-colors block">
+                    support@sunwinpowersolutions.com
                   </a>
                 </div>
               </li>

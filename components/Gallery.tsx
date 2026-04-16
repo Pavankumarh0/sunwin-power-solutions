@@ -1,6 +1,6 @@
 'use client';
 
-import { motion } from 'framer-motion';
+import { motion, AnimatePresence } from 'framer-motion';
 import { useInView } from 'framer-motion';
 import { useRef, useState } from 'react';
 import Image from 'next/image';
@@ -10,6 +10,8 @@ const Gallery = () => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
   const [selectedCategory, setSelectedCategory] = useState('All');
+  const [beforeOpen, setBeforeOpen] = useState(false);
+  const [afterOpen, setAfterOpen] = useState(false);
 
   const categories = ['All', 'Ground Mounted Solar', 'RoofTop Solar'];
 
@@ -56,6 +58,38 @@ const Gallery = () => {
       category: 'RoofTop Solar',
     })),
   ];
+  // Before images from /public/Before/
+  const beforeImages = [
+    'IMG-20260411-WA0010.jpg',
+    'IMG-20260411-WA0029.jpg',
+    'IMG-20260411-WA0030.jpg',
+    'IMG-20260411-WA0031.jpg',
+    'IMG-20260411-WA0032.jpg',
+    'IMG-20260411-WA0033.jpg',
+    'IMG-20260411-WA0034.jpg',
+    'IMG-20260411-WA0035.jpg',
+    'IMG-20260411-WA0036.jpg',
+    'IMG-20260411-WA0037.jpg',
+    'IMG-20260411-WA0038.jpg',
+    'IMG-20260411-WA0039.jpg',
+    'IMG-20260411-WA0040.jpg',
+    'IMG-20260411-WA0041.jpg',
+  ];
+
+  // After images from /public/After/
+  const afterImages = [
+    'IMG-20260411-WA0006.jpg',
+    'IMG-20260411-WA0007(1).jpg',
+    'IMG-20260411-WA0008.jpg',
+    'IMG-20260411-WA0009(1).jpg',
+    'IMG-20260411-WA0010(1).jpg',
+    'IMG-20260411-WA0011(1).jpg',
+    'IMG-20260411-WA0012(1).jpg',
+    'IMG-20260411-WA0013(1).jpg',
+    'IMG-20260411-WA0014(1).jpg',
+    'IMG-20260411-WA0015(1).jpg',
+  ];
+
   const filteredItems = selectedCategory === 'All'
     ? galleryItems
     : galleryItems.filter(item => item.category === selectedCategory);
@@ -130,6 +164,131 @@ const Gallery = () => {
         ) : (
           <div className="text-center py-12">
             <p className="text-secondary">No images found in this category.</p>
+          </div>
+        )}
+
+        {/* Before & After toggles — shown inside RoofTop Solar section */}
+        {(selectedCategory === 'All' || selectedCategory === 'RoofTop Solar') && (
+          <div className="mt-10 space-y-4">
+            {/* Before Toggle */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={isInView ? { opacity: 1, y: 0 } : {}}
+              transition={{ delay: 0.3, duration: 0.5 }}
+            >
+              <button
+                onClick={() => setBeforeOpen(!beforeOpen)}
+                className="w-full flex items-center justify-between px-6 py-4 bg-white rounded-xl shadow-md hover:shadow-lg transition-shadow border border-gray-200"
+              >
+                <div className="flex items-center gap-3">
+                  <span className="w-3 h-3 rounded-full bg-orange-500 inline-block" />
+                  <span className="text-xl font-bold text-secondary">Before</span>
+                  <span className="text-sm text-gray-500 font-medium">({beforeImages.length} photos)</span>
+                </div>
+                <motion.span
+                  animate={{ rotate: beforeOpen ? 180 : 0 }}
+                  transition={{ duration: 0.3 }}
+                  className="text-primary text-2xl font-bold"
+                >
+                  ▼
+                </motion.span>
+              </button>
+
+              <AnimatePresence>
+                {beforeOpen && (
+                  <motion.div
+                    initial={{ opacity: 0, height: 0 }}
+                    animate={{ opacity: 1, height: 'auto' }}
+                    exit={{ opacity: 0, height: 0 }}
+                    transition={{ duration: 0.4 }}
+                    className="overflow-hidden"
+                  >
+                    <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mt-4">
+                      {beforeImages.map((img, index) => (
+                        <motion.div
+                          key={img}
+                          initial={{ opacity: 0, scale: 0.9 }}
+                          animate={{ opacity: 1, scale: 1 }}
+                          transition={{ delay: index * 0.05, duration: 0.4 }}
+                          className="relative overflow-hidden rounded-xl shadow-lg h-80"
+                        >
+                          <Image
+                            src={`/Before/${img}`}
+                            alt={`Before ${index + 1}`}
+                            fill
+                            className="object-cover"
+                            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                          />
+                          <div className="absolute top-3 left-3 bg-orange-500 text-white text-xs font-bold px-3 py-1 rounded-full">
+                            Before
+                          </div>
+                        </motion.div>
+                      ))}
+                    </div>
+                  </motion.div>
+                )}
+              </AnimatePresence>
+            </motion.div>
+
+            {/* After Toggle */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={isInView ? { opacity: 1, y: 0 } : {}}
+              transition={{ delay: 0.4, duration: 0.5 }}
+            >
+              <button
+                onClick={() => setAfterOpen(!afterOpen)}
+                className="w-full flex items-center justify-between px-6 py-4 bg-white rounded-xl shadow-md hover:shadow-lg transition-shadow border border-gray-200"
+              >
+                <div className="flex items-center gap-3">
+                  <span className="w-3 h-3 rounded-full bg-green-500 inline-block" />
+                  <span className="text-xl font-bold text-secondary">After</span>
+                  <span className="text-sm text-gray-500 font-medium">({afterImages.length} photos)</span>
+                </div>
+                <motion.span
+                  animate={{ rotate: afterOpen ? 180 : 0 }}
+                  transition={{ duration: 0.3 }}
+                  className="text-primary text-2xl font-bold"
+                >
+                  ▼
+                </motion.span>
+              </button>
+
+              <AnimatePresence>
+                {afterOpen && (
+                  <motion.div
+                    initial={{ opacity: 0, height: 0 }}
+                    animate={{ opacity: 1, height: 'auto' }}
+                    exit={{ opacity: 0, height: 0 }}
+                    transition={{ duration: 0.4 }}
+                    className="overflow-hidden"
+                  >
+                    <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mt-4">
+                      {afterImages.map((img, index) => (
+                        <motion.div
+                          key={img}
+                          initial={{ opacity: 0, scale: 0.9 }}
+                          animate={{ opacity: 1, scale: 1 }}
+                          transition={{ delay: index * 0.05, duration: 0.4 }}
+                          className="relative overflow-hidden rounded-xl shadow-lg h-80"
+                        >
+                          <Image
+                            src={`/After/${img}`}
+                            alt={`After ${index + 1}`}
+                            fill
+                            className="object-cover"
+                            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                          />
+                          <div className="absolute top-3 left-3 bg-green-500 text-white text-xs font-bold px-3 py-1 rounded-full">
+                            After
+                          </div>
+                        </motion.div>
+                      ))}
+                    </div>
+                  </motion.div>
+                )}
+              </AnimatePresence>
+            </motion.div>
           </div>
         )}
 

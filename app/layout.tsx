@@ -68,7 +68,7 @@ export default function RootLayout({
     "description": "Leading solar energy solutions provider in Puthagaram, Chennai. Expert solar installations for residential, commercial & industrial sectors.",
     "url": "https://www.sunwinpowersolutions.com",
     "telephone": "+91-9500164901",
-    "email": "sunwinps@gmail.com",
+    "email": "support@sunwinpowersolutions.com",
     "priceRange": "$$",
     "address": {
       "@type": "PostalAddress",
